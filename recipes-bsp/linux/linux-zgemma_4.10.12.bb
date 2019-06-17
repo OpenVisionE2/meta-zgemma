@@ -27,6 +27,19 @@ RPROVIDES_kernel-image = "kernel-image-${KERNEL_VERSION}"
 
 SRC_URI += "http://www.zgemma.org/downloads/linux-${PV}-${ARCH}.tar.gz;name=${ARCH} \
 	file://defconfig \
+    file://TBS-fixes-for-4.10-kernel.patch \
+    file://0001-Support-TBS-USB-drivers-for-4.6-kernel.patch \
+    file://0001-TBS-fixes-for-4.6-kernel.patch \
+    file://0001-STV-Add-PLS-support.patch \
+    file://0001-STV-Add-SNR-Signal-report-parameters.patch \
+    file://blindscan2.patch \
+    file://0001-stv090x-optimized-TS-sync-control.patch \
+    file://v3-1-3-media-si2157-Add-support-for-Si2141-A10.patch \
+    file://v3-2-3-media-si2168-add-support-for-Si2168-D60.patch \
+    file://v3-3-3-media-dvbsky-MyGica-T230C-support.patch \
+    file://v3-3-4-media-dvbsky-MyGica-T230C-support.patch \
+    file://v3-3-5-media-dvbsky-MyGica-T230C-support.patch \
+    file://add-more-devices-rtl8xxxu.patch \
 	"
 
 SRC_URI_append_mipsel = " \
