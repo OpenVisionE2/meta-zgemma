@@ -26,7 +26,7 @@ RPROVIDES_kernel-base = "kernel-${KERNEL_VERSION}"
 RPROVIDES_kernel-image = "kernel-image-${KERNEL_VERSION}"
 
 SRC_URI += "http://www.zgemma.org/downloads/linux-${PV}-${ARCH}.tar.gz;name=${ARCH} \
-	file://defconfig \
+    file://defconfig \
     file://TBS-fixes-for-4.10-kernel.patch \
     file://0001-Support-TBS-USB-drivers-for-4.6-kernel.patch \
     file://0001-TBS-fixes-for-4.6-kernel.patch \
@@ -40,21 +40,21 @@ SRC_URI += "http://www.zgemma.org/downloads/linux-${PV}-${ARCH}.tar.gz;name=${AR
     file://v3-3-4-media-dvbsky-MyGica-T230C-support.patch \
     file://v3-3-5-media-dvbsky-MyGica-T230C-support.patch \
     file://add-more-devices-rtl8xxxu.patch \
-	"
+    "
 
 SRC_URI_append_mipsel = " \
-	file://0001-add-dmx-source-timecode.patch \
-	file://0002-nand-ecc-strength-and-bitflip.patch \
-	file://sdio-pinmux.patch \
-	"
+    file://0001-add-dmx-source-timecode.patch \
+    file://0002-nand-ecc-strength-and-bitflip.patch \
+    file://sdio-pinmux.patch \
+    "
 
 SRC_URI_append_arm = " \
-	file://export_pmpoweroffprepare.patch \
-	file://findkerneldevice.sh \
-	file://reserve_dvb_adapter_0.patch \
-	file://blacklist_mmc0.patch \
-	file://initramfs-subdirboot.cpio.gz;unpack=0 \
-	"
+    file://export_pmpoweroffprepare.patch \
+    file://findkerneldevice.sh \
+    file://reserve_dvb_adapter_0.patch \
+    file://blacklist_mmc0.patch \
+    file://initramfs-subdirboot.cpio.gz;unpack=0 \
+    "
 
 S = "${WORKDIR}/linux-${PV}"
 
