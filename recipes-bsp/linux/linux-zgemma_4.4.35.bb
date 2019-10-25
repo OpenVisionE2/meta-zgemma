@@ -8,7 +8,7 @@ PACKAGE_ARCH = "${MACHINE_ARCH}"
 
 KERNEL_RELEASE = "4.4.35"
 SRCDATE = "20181121"
-COMPATIBLE_MACHINE = "h10|h9|i55plus|h9combo"
+COMPATIBLE_MACHINE = "^(h9|h9combo|h10|i55plus)$"
 
 inherit kernel machine_kernel_pr
 

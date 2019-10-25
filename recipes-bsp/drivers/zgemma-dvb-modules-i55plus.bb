@@ -8,7 +8,7 @@ require zgemma-dvb-modules.inc
 SRC_URI[arm.md5sum] = "0b0a360558722f668f3480faa0595147"
 SRC_URI[arm.sha256sum] = "d17db5bb7b3dd42ac5df3ca0541ac093ac6e8978dc84967ef5328aac5f622f13"
 
-COMPATIBLE_MACHINE = "i55plus"
+COMPATIBLE_MACHINE = "^(i55plus)$"
 
 INITSCRIPT_NAME = "suspend"
 INITSCRIPT_PARAMS = "start 89 0 ."
