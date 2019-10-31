@@ -69,6 +69,8 @@ KERNEL_OUTPUT_DIR_mipsel = "."
 KERNEL_CONSOLE_mipsel = "null"
 SERIAL_CONSOLE_mipsel ?= ""
 
+KERNEL_EXTRA_ARGS_mipsel = "EXTRA_CFLAGS=-Wno-attribute-alias"
+
 pkg_postinst_kernel-image_mipsel() {
 	if [ "x$D" == "x" ]; then
 		if [ -f /${KERNEL_IMAGEDEST}/${KERNEL_IMAGETYPE} ] ; then
