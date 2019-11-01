@@ -6,7 +6,7 @@ PACKAGE_ARCH = "${MACHINE_ARCH}"
 
 KERNEL_RELEASE = "4.10.12"
 
-COMPATIBLE_MACHINE = "sh1|h3|h4|h5|h6|h7|lc|i55"
+COMPATIBLE_MACHINE = "^(sh1|h3|h4|h5|h6|h7|lc|i55)$"
 
 inherit kernel machine_kernel_pr
 
