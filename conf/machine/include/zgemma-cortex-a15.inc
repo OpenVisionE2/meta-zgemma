@@ -3,6 +3,9 @@ KERNEL_MODULE_AUTOLOAD += "xfs"
 # We know about rtc
 MACHINE_FEATURES_BACKFILL_CONSIDERED = "rtc"
 
+TARGET_ARCH = "arm"
+DEFAULTTUNE = "cortexa15hf-neon-vfpv4"
+
 PREFERRED_VERSION_linux-zgemma = "4.10.12"
 
 #Provider
@@ -35,8 +38,6 @@ DVBMEDIASINK_CONFIG = "--with-h265 --with-vb8 --with-vb9 --with-wma --with-wmv -
 
 MACHINE_FEATURES += "alsa usbhost wlan 3dtv switchoff osdposition hdmicec blindscan-tbs"
 
-IMAGEVERSION := "${IMAGE_NAME}"
-IMAGEVERSION[vardepsexclude] = "DATE"
 IMAGEDIR ?= "zgemma/${MACHINE}"
 IMGDEPLOYDIR ?= "${DEPLOY_DIR_IMAGE}"
 

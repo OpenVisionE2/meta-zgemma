@@ -37,8 +37,6 @@ DVBMEDIASINK_CONFIG = "--with-wma --with-wmv --with-pcm --with-dts --with-eac3 \
 
 MACHINE_FEATURES += "alsa usbhost wlan 3dtv switchoff osdposition hdmicec blindscan-tbs"
 
-IMAGEVERSION := "${IMAGE_NAME}"
-IMAGEVERSION[vardepsexclude] = "DATE"
 IMAGEDIR ?= "zgemma/${MACHINE}"
 IMGDEPLOYDIR ?= "${DEPLOY_DIR_IMAGE}"
 

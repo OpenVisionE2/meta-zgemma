@@ -3,6 +3,12 @@ KERNEL_MODULE_AUTOLOAD += "xfs"
 # We know about rtc
 MACHINE_FEATURES_BACKFILL_CONSIDERED = "rtc"
 
+TARGET_ARCH = "arm"
+DEFAULTTUNE = "cortexa15hf-neon-vfpv4"
+
+HICHIPSET = "3798mv200"
+CHIPSET = "Hi3798Mv200"
+
 PREFERRED_VERSION_linux-zgemma = "4.4.35"
 
 #Provider
@@ -40,10 +46,8 @@ MACHINE_EXTRA_RRECOMMENDS = " \
 	ntfs-3g \
 	"
 
-MACHINE_FEATURES += " alsa usbhost wlan 3dtv switchoff osdposition hdmicec"
+MACHINE_FEATURES += " alsa usbhost wlan 3dtv switchoff osdposition hdmicec hisil hisil-3798mv200 mali transcoding wol"
 
-IMAGEVERSION := "${IMAGE_NAME}"
-IMAGEVERSION[vardepsexclude] = "DATE"
 IMAGEDIR ?= "zgemma"
 IMAGEDIRRECOVERY ?= "zgemma-recovery"
 IMGDEPLOYDIR ?= "${DEPLOY_DIR_IMAGE}"

@@ -1,17 +1,19 @@
+DISTRO_FEATURES_remove = "x11 wayland directfb"
+
 MACHINE_ESSENTIAL_EXTRA_RDEPENDS = "\
 	zgemma-dvb-modules-${MACHINE} \
-	${@bb.utils.contains('MACHINE_FEATURES', 'hisil-3798mv200', 'zgemma-libs-3798mv200 zgemma-param-3798mv200 zgemma-bootargs-3798mv200 zgemma-bootlogo-3798mv200 zgemma-fastboot-3798mv200' , '', d)} \
-	${@bb.utils.contains('MACHINE_FEATURES', 'hisil-recovery', 'zgemma-recovery-3798mv200' , '', d)} \
+	${@bb.utils.contains("MACHINE_FEATURES", "hisil-3798mv200", "zgemma-libs-3798mv200 zgemma-param-3798mv200 zgemma-bootargs-3798mv200 zgemma-bootlogo-3798mv200 zgemma-fastboot-3798mv200" , "", d)} \
+	${@bb.utils.contains("MACHINE_FEATURES", "hisil-recovery", "zgemma-recovery-3798mv200" , "", d)} \
+	${@bb.utils.contains("MACHINE_FEATURES", "hisil-3798mv200", "kernel-module-mali-3798mv200 zgemma-mali-3798mv200" , "", d)} \
+	${@bb.utils.contains("MACHINE_FEATURES", "wol", "zgemma-ethwol" , "", d)} \
+	${@bb.utils.contains("MACHINE_FEATURES", "emmc", "zgemma-resizerootfs partitions-by-name" , "", d)} \
 	"
 
 MACHINE_ESSENTIAL_EXTRA_RRECOMMENDS = "\
 	kernel-module-cdfs \
 	\
-	${@bb.utils.contains('MACHINE_FEATURES', 'v3d-nxpl', 'zgemma-v3ddriver-${MACHINE}' , '', d)} \
-	${@bb.utils.contains('MACHINE_FEATURES', 'hisil-3798mv200', 'kernel-module-mali-3798mv200 zgemma-mali-3798mv200' , '', d)} \
-	${@bb.utils.contains('MACHINE_FEATURES', 'wol', 'zgemma-ethwol' , '', d)} \
-	${@bb.utils.contains('MACHINE_FEATURES', 'emmc', 'zgemma-resizerootfs partitions-by-name' , '', d)} \
-	${@bb.utils.contains('MACHINE_FEATURES', 'bluetooth', 'kernel-module-btusb bluez5' , '', d)} \
+	${@bb.utils.contains("MACHINE_FEATURES", "v3d-nxpl", "zgemma-v3ddriver-${MACHINE}" , "", d)} \
+	${@bb.utils.contains("MACHINE_FEATURES", "bluetooth", "kernel-module-btusb bluez5" , "", d)} \
 	\
 	firmware-carl9170 \
 	firmware-htc7010 \
