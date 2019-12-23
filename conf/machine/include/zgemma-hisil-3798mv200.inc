@@ -64,6 +64,7 @@ IMAGE_CMD_ubi_append = " \
 	cp ${DEPLOY_DIR_IMAGE}/zgemma-partitions-${MACHINE}/${MACHINE}/baseparam.img ${IMGDEPLOYDIR}/${IMAGEDIR}/${MACHINE}/baseparam.img; \
 	cp ${DEPLOY_DIR_IMAGE}/zgemma-partitions-${MACHINE}/${MACHINE}/logo.img ${IMGDEPLOYDIR}/${IMAGEDIR}/${MACHINE}/logo.img; \
 	echo "${IMAGE_NAME}" > ${IMGDEPLOYDIR}/${IMAGEDIR}/imageversion; \
+	rm -f ${IMGDEPLOYDIR}/*.zip; \
 	cd ${IMGDEPLOYDIR}/${IMAGEDIR}; \
 	zip -r ../${IMAGE_NAME}_usb.zip *; \
 	cd ..; \
@@ -90,6 +91,7 @@ IMAGE_CMD_zgemmafastboot8gb_append = " \
 	cp ${DEPLOY_DIR_IMAGE}/zgemma-partitions-${MACHINE}/${MACHINE}/logo.img ${IMGDEPLOYDIR}/${IMAGEDIRRECOVERY}/${MACHINE}/logo.img; \
 	cp ${DEPLOY_DIR_IMAGE}/zgemma-partitions-${MACHINE}/${MACHINE}/recovery.bin ${IMGDEPLOYDIR}/${IMAGEDIRRECOVERY}/${MACHINE}/recovery.bin; \
 	echo "To access the recovery image press immediately by power-up the system a remote-key button untill the display says boot" >> ${IMGDEPLOYDIR}/${IMAGEDIRRECOVERY}/RECOVERY_${MACHINE}_READ.ME; \
+	rm -f ${IMGDEPLOYDIR}/*.zip; \
 	cd ${IMGDEPLOYDIR}/${IMAGEDIRRECOVERY}; \
 	zip -r ../${IMAGE_NAME}_recovery_emmc.zip *; \
 	cd ..; \

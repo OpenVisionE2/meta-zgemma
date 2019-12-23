@@ -48,6 +48,7 @@ IMAGE_CMD_zgemmc_append = "\
 	cp ${DEPLOY_DIR_IMAGE}/zImage ${IMGDEPLOYDIR}/${IMAGEDIR}/kernel.bin; \
 	cp ${IMGDEPLOYDIR}/${IMAGE_NAME}${IMAGE_NAME_SUFFIX}.tar ${IMGDEPLOYDIR}/${IMAGEDIR}/rootfs.tar; \
 	bzip2 ${IMGDEPLOYDIR}/${IMAGEDIR}/rootfs.tar; \
+	rm -f ${IMGDEPLOYDIR}/*.zip; \
 	cd ${IMGDEPLOYDIR}; \
 	zip ${IMAGE_NAME}_usb.zip ${IMAGEDIR}/disk.img ${IMAGEDIR}/imageversion; \
 	zip ${IMAGE_NAME}_multiboot_ofgwrite.zip ${IMAGEDIR}/imageversion ${IMAGEDIR}/kernel.bin ${IMAGEDIR}/rootfs.tar.bz2; \
