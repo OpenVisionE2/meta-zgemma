@@ -40,7 +40,7 @@ SRC_URI_append_i55plus += " \
 # package names instead, to allow only one kernel to be installed.
 PKG_kernel-base = "kernel-base"
 PKG_kernel-image = "kernel-image"
-RPROVIDES_kernel-base = "kernel-${KERNEL_VERSION}"
+RPROVIDES_${KERNEL_PACKAGE_NAME}-base = "kernel-${KERNEL_VERSION}"
 RPROVIDES_kernel-image = "kernel-image-${KERNEL_VERSION}"
 
 S = "${WORKDIR}/linux-${PV}"
