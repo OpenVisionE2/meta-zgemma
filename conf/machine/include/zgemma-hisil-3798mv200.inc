@@ -1,3 +1,5 @@
+DISTRO_FEATURES_append += "opengl"
+
 KERNEL_MODULE_AUTOLOAD += "xfs"
 
 # We know about rtc
@@ -37,9 +39,6 @@ EXTRA_OECONF_append_pn-enigma2 += " --with-alphablendingacceleration=always --wi
 # Qt
 PACKAGECONFIG_GL_pn-qtbase = " "
 PACKAGECONFIG_append_pn-qtbase += " gles2 linuxfb"
-
-# Kodi
-EXTRA_OECONF_append_pn-kodi += " --with-gpu=mali --enable-player=hiplayer"
 
 MACHINE_EXTRA_RRECOMMENDS = " \
 	ffmpeg \

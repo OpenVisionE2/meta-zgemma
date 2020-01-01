@@ -17,13 +17,13 @@ SRC_URI[arm.sha256sum] = "ea4ba0433d252c18f38ff2f4dce4b70880e447e1cffdc2066d5a9b
 
 SRC_URI = "http://www.zgemma.org/downloads/linux-${PV}-${SRCDATE}-${ARCH}.tar.gz;name=${ARCH} \
 	file://defconfig \
+	file://0002-log2-give-up-on-gcc-constant-optimizations.patch \
+	file://0003-dont-mark-register-as-const.patch \
 	file://0001-remote.patch \
 	file://HauppaugeWinTV-dualHD.patch \
 	file://dib7000-linux_4.4.179.patch \
 	file://dvb-usb-linux_4.4.179.patch \
 	file://wifi-linux_4.4.183.patch \
-	file://0002-log2-give-up-on-gcc-constant-optimizations.patch \
-	file://0003-dont-mark-register-as-const.patch \
 	file://initramfs-subdirboot.cpio.gz;unpack=0 \
 	file://findkerneldevice.sh \
 "
