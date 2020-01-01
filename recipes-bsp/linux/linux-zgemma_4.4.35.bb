@@ -52,9 +52,9 @@ KERNEL_IMAGETYPE = "uImage"
 KERNEL_OUTPUT = "arch/${ARCH}/boot/${KERNEL_IMAGETYPE}"
 
 
-FILES_kernel-image_h9 = " "
-FILES_kernel-image_i5plus = " "
-FILES_kernel-image = "/${KERNEL_IMAGEDEST}/findkerneldevice.sh"
+FILES_${KERNEL_PACKAGE_NAME}-image_h9 = " "
+FILES_${KERNEL_PACKAGE_NAME}-image_i5plus = " "
+FILES_${KERNEL_PACKAGE_NAME}-image = "/${KERNEL_IMAGEDEST}/findkerneldevice.sh"
 
 kernel_do_configure_prepend() {
 	install -d ${B}/usr

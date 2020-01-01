@@ -85,7 +85,7 @@ pkg_postinst_kernel-image_mipsel() {
 KERNEL_IMAGETYPE_arm = "zImage"
 KERNEL_OUTPUT_arm = "arch/${ARCH}/boot/${KERNEL_IMAGETYPE}"
 
-FILES_kernel-image_arm = "/${KERNEL_IMAGEDEST}/findkerneldevice.sh"
+FILES_${KERNEL_PACKAGE_NAME}-image_arm = "/${KERNEL_IMAGEDEST}/findkerneldevice.sh"
 
 kernel_do_configure_prepend_arm() {
 	install -d ${B}/usr
