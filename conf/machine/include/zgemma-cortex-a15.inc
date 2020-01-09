@@ -28,7 +28,7 @@ PACKAGECONFIG_append_pn-qtbase += " gles2 linuxfb"
 
 
 MACHINE_EXTRA_RRECOMMENDS = " \
-	gst-plugin-dvbmediasink \
+	${@bb.utils.contains("GST_VERSION", "1.0", "gstreamer1.0-plugin-dvbmediasink", "gst-plugin-dvbmediasink", d)} \
 	ntfs-3g \
 	"
 
