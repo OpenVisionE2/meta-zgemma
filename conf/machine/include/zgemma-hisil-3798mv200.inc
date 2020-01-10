@@ -12,6 +12,7 @@ HICHIPSET = "3798mv200"
 CHIPSET = "Hi3798Mv200"
 
 PREFERRED_VERSION_linux-zgemma = "4.4.35"
+PREFERRED_VERSION_ffmpeg = "3.4.2"
 
 #Provider
 PREFERRED_PROVIDER_virtual/kernel ?= "linux-zgemma"
