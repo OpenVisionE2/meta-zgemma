@@ -27,6 +27,7 @@ RPROVIDES_${KERNEL_PACKAGE_NAME}-image = "${KERNEL_PACKAGE_NAME}-image-${KERNEL_
 
 SRC_URI += "http://www.zgemma.org/downloads/linux-${PV}-${ARCH}.tar.gz;name=${ARCH} \
     file://defconfig \
+    file://${OPENVISION_BASE}/meta-openvision/recipes-linux/kernel-patches/kernel-add-support-for-gcc9.patch \
     file://TBS-fixes-for-4.10-kernel.patch \
     file://0001-Support-TBS-USB-drivers-for-4.6-kernel.patch \
     file://0001-TBS-fixes-for-4.6-kernel.patch \
@@ -42,13 +43,13 @@ SRC_URI += "http://www.zgemma.org/downloads/linux-${PV}-${ARCH}.tar.gz;name=${AR
     file://add-more-devices-rtl8xxxu.patch \
     "
 
-SRC_URI_append_mipsel = " \
+SRC_URI_append_mipsel += "\
     file://0001-add-dmx-source-timecode.patch \
     file://0002-nand-ecc-strength-and-bitflip.patch \
     file://sdio-pinmux.patch \
     "
 
-SRC_URI_append_arm = " \
+SRC_URI_append_arm += "\
     file://export_pmpoweroffprepare.patch \
     file://findkerneldevice.sh \
     file://reserve_dvb_adapter_0.patch \
