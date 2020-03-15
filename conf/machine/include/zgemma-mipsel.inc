@@ -23,7 +23,6 @@ DEFAULTTUNE ?= "mips32el"
 require conf/machine/include/tune-mips32.inc
 require conf/machine/include/zgemma-essential.inc
 
-PACKAGECONFIG_GL_pn-qtbase = " gles2 linuxfb"
 
 MACHINE_EXTRA_RRECOMMENDS = " \
 	${@bb.utils.contains("GST_VERSION", "1.0", "gstreamer1.0-plugin-dvbmediasink", "gst-plugin-dvbmediasink", d)} \

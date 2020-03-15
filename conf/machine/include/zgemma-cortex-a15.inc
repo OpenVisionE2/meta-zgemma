@@ -23,8 +23,6 @@ require conf/machine/include/tune-cortexa15.inc
 require conf/machine/include/zgemma-essential.inc
 
 # Qt
-PACKAGECONFIG_GL_pn-qtbase = " "
-PACKAGECONFIG_append_pn-qtbase += " gles2 linuxfb"
 
 
 MACHINE_EXTRA_RRECOMMENDS = " \
