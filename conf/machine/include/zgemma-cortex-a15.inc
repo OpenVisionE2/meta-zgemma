@@ -22,9 +22,6 @@ PREFERRED_PROVIDER_virtual/blindscan-dvbs ?= "zgemma-dvb-modules-${MACHINE}"
 require conf/machine/include/tune-cortexa15.inc
 require conf/machine/include/zgemma-essential.inc
 
-# Qt
-
-
 MACHINE_EXTRA_RRECOMMENDS = " \
 	${@bb.utils.contains("GST_VERSION", "1.0", "gstreamer1.0-plugin-dvbmediasink", "gst-plugin-dvbmediasink", d)} \
 	ntfs-3g \
