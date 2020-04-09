@@ -2,13 +2,12 @@ DESCRIPTION = "Hardware drivers for ${MACHINE}"
 SECTION = "base"
 PRIORITY = "required"
 LICENSE = "CLOSED"
-VER ?= "${@bb.utils.contains('TARGET_ARCH', 'aarch64', '64' , '', d)}"
 
 PACKAGE_ARCH = "${MACHINE_ARCH}"
 
 PV = "${KV}-${SRCDATE}"
 
-SRC_URI = "http://www.zgemma.org/downloads/${MACHINE}-drivers${VER}-${PV}.zip;name=${ARCH}"
+SRC_URI = "http://www.zgemma.org/downloads/${MACHINE}-drivers-${PV}.zip;name=${ARCH}"
 
 S = "${WORKDIR}"
 

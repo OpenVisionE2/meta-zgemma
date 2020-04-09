@@ -2,11 +2,12 @@ DESCRIPTION = "${MACHINE} libraries"
 SECTION = "base"
 PRIORITY = "required"
 LICENSE = "CLOSED"
-PACKAGE_ARCH = "${MACHINE_ARCH}"
-PR = "${SRCDATE}"
-VER ?= "${@bb.utils.contains('TARGET_ARCH', 'aarch64', '64' , '', d)}"
 
-SRC_URI = "http://www.zgemma.org/downloads/zgemma-libs${VER}-${HICHIPSET}-${SRCDATE}.zip"
+PACKAGE_ARCH = "${MACHINE_ARCH}"
+
+PR = "${SRCDATE}"
+
+SRC_URI = "http://www.zgemma.org/downloads/zgemma-libs-${HICHIPSET}-${SRCDATE}.zip"
 
 S = "${WORKDIR}"
 

@@ -17,6 +17,11 @@ PREFERRED_PROVIDER_virtual/mesa ?= "mesa"
 IMAGE_FSTYPES += "ubi"
 UBI_VOLNAME = "rootfs"
 
+MTD_KERNEL = "mtd1"
+MTD_ROOTFS = "mtd2"
+KERNEL_FILE = "kernel.bin"
+ROOTFS_FILE = "rootfs.bin"
+
 TARGET_ARCH = "mipsel"
 DEFAULTTUNE ?= "mips32el"
 
