@@ -1,4 +1,4 @@
-DESCRIPTION = "Resize Rootfs"
+DESCRIPTION = "Zgemma resize rootfs"
 require conf/license/license-gplv2.inc
 
 COMPATIBLE_MACHINE = "^(h7|h9combo|h10)$"
