@@ -42,7 +42,7 @@ MACHINE_EXTRA_RRECOMMENDS = " \
 	ntfs-3g \
 	"
 
-MACHINE_FEATURES += " alsa usbhost wlan 3dtv switchoff osdposition hdmicec hisil hisil-3798mv200 mali transcoding wol"
+MACHINE_FEATURES += " alsa usbhost wlan 3dtv switchoff osdposition hdmicec hisil hisil-3798mv200 mali transcoding wol emmc"
 
 IMAGEDIR ?= "zgemma"
 IMAGEDIRRECOVERY ?= "zgemma-recovery"
