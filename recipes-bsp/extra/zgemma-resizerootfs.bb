@@ -1,7 +1,7 @@
 DESCRIPTION = "Zgemma resize rootfs"
 require conf/license/license-gplv2.inc
 
-COMPATIBLE_MACHINE = "^(h7|h9combo|h10)$"
+COMPATIBLE_MACHINE = "^(h7|h9|h9combo|h10|i55plus)$"
 
 RDEPENDS_${PN} = "e2fsprogs-resize2fs"
 PV = "1.0"
