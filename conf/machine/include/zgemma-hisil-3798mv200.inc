@@ -74,9 +74,9 @@ IMAGE_CMD_zgemmafastboot8gb_append = " \
 	cp ${IMGDEPLOYDIR}/${IMAGE_NAME}${IMAGE_NAME_SUFFIX}.tar ${IMGDEPLOYDIR}/${IMAGEDIR}/${MACHINE}/rootfs.tar; \
 	bzip2 ${IMGDEPLOYDIR}/${IMAGEDIR}/${MACHINE}/rootfs.tar; \
 	echo "${IMAGE_NAME}" > ${IMGDEPLOYDIR}/${IMAGEDIR}/${MACHINE}/imageversion; \
-	echo "${IMAGE_NAME}_emmc.zip" > ${IMGDEPLOYDIR}/${IMAGEDIR}/unforce_${MACHINE}.txt; \
+	echo "${IMAGE_NAME}_usb.zip" > ${IMGDEPLOYDIR}/${IMAGEDIR}/unforce_${MACHINE}.txt; \
 	echo "Rename unforce_${MACHINE}.txt to force_${MACHINE}.txt and move it to the root of your usb-stick" > ${IMGDEPLOYDIR}/${IMAGEDIR}/force_${MACHINE}_READ.ME; \
-	echo "When enter the recovery menu you're forcing that the image ${IMAGE_NAME}_emmc.zip will been installed into linux-slot1" >> ${IMGDEPLOYDIR}/${IMAGEDIR}/force_${MACHINE}_READ.ME; \
+	echo "When enter the recovery menu you're forcing that the image ${IMAGE_NAME}_usb.zip will been installed into linux-slot1" >> ${IMGDEPLOYDIR}/${IMAGEDIR}/force_${MACHINE}_READ.ME; \
 	cp ${IMGDEPLOYDIR}/bootoptions.img ${IMGDEPLOYDIR}/${IMAGEDIRRECOVERY}/${MACHINE}/bootoptions.img; \
 	cp ${DEPLOY_DIR_IMAGE}/zgemma-partitions-${MACHINE}/fastboot.bin ${IMGDEPLOYDIR}/${IMAGEDIRRECOVERY}/fastboot.bin; \
 	cp ${DEPLOY_DIR_IMAGE}/zgemma-partitions-${MACHINE}/bootargs.bin ${IMGDEPLOYDIR}/${IMAGEDIRRECOVERY}/bootargs.bin; \
@@ -93,7 +93,7 @@ IMAGE_CMD_zgemmafastboot8gb_append = " \
 	cd ..; \
 	rm -Rf ${IMAGEDIRRECOVERY}; \
 	cd ${IMGDEPLOYDIR}/${IMAGEDIR}; \
-	zip -r ../${IMAGE_NAME}_emmc.zip *; \
+	zip -r ../${IMAGE_NAME}_usb.zip *; \
 	cd ..; \
 	rm -Rf ${IMAGEDIR}; \
 	"
