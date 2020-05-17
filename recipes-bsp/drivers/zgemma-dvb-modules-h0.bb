@@ -1,14 +1,12 @@
 KV = "4.4.35"
-SRCDATE = "20200513"
-
-PROVIDES = "virtual/blindscan-dvbc virtual/blindscan-dvbs"
+SRCDATE = "20200512"
 
 require zgemma-dvb-modules.inc
 
-SRC_URI[arm.md5sum] = "4cedacb60a95353ad57a71111ec7dbdb"
-SRC_URI[arm.sha256sum] = "ee415c6902625f6a89c110386e27c7b619448bbf9a6d84f66d8322f4d3264be6"
+SRC_URI[mips.md5sum] = ""
+SRC_URI[mips.sha256sum] = ""
 
-COMPATIBLE_MACHINE = "^(h9)$"
+COMPATIBLE_MACHINE = "^(h0)$"
 
 INITSCRIPT_NAME = "suspend"
 INITSCRIPT_PARAMS = "start 89 0 ."
@@ -44,4 +42,3 @@ do_package_qa() {
 }
 
 FILES_${PN} += " ${bindir} ${sysconfdir}/init.d"
-
