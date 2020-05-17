@@ -11,8 +11,8 @@ COMPATIBLE_MACHINE = "^(h9|h9combo|h10|i55plus|h0)$"
 
 inherit kernel machine_kernel_pr
 
-SRC_URI[md5sum] = "f9e67e2d0ceab518510413f8f4315bc3"
-SRC_URI[sha256sum] = "45ae717b966a74326fd7297d81b3a17fd5b3962b7704170682a615ca7cdec644"
+SRC_URI[arm.md5sum] = "f9e67e2d0ceab518510413f8f4315bc3"
+SRC_URI[arm.sha256sum] = "45ae717b966a74326fd7297d81b3a17fd5b3962b7704170682a615ca7cdec644"
 
 SRC_URI = "http://www.zgemma.org/downloads/linux-${PV}-${SRCDATE}-${ARCH}.tar.gz;name=${ARCH} \
 	file://defconfig \
