@@ -2,9 +2,7 @@ DISTRO_FEATURES_remove = "x11 wayland directfb"
 
 MACHINE_ESSENTIAL_EXTRA_RDEPENDS = "\
 	zgemma-dvb-modules-${MACHINE} \
-	${@bb.utils.contains("MACHINE_FEATURES", "hisil-3798mv200", "zgemma-libs-3798mv200 zgemma-param-3798mv200 zgemma-bootargs-3798mv200 zgemma-bootlogo-3798mv200 zgemma-fastboot-3798mv200" , "", d)} \
-	${@bb.utils.contains("MACHINE_FEATURES", "hisil-3798mv200", "kernel-module-mali-3798mv200 zgemma-mali-3798mv200" , "", d)} \
-	${@bb.utils.contains("MACHINE_FEATURES", "hisil-3798mv200 emmc", "zgemma-recovery-3798mv200" , "", d)} \
+	${@bb.utils.contains("MACHINE_FEATURES", "hisil-3798mv200", "zgemma-recovery-3798mv200 kernel-module-mali-3798mv200 zgemma-mali-3798mv200 zgemma-libs-3798mv200 zgemma-param-3798mv200 zgemma-bootargs-3798mv200 zgemma-bootlogo-3798mv200 zgemma-fastboot-3798mv200" , "", d)} \
 	${@bb.utils.contains("MACHINE_FEATURES", "hisil-3716mv430", "zgemma-libs-3716mv430 zgemma-param-3716mv430 zgemma-bootargs-3716mv430 zgemma-bootlogo-3716mv430 zgemma-fastboot-3716mv430" , "", d)} \
 	${@bb.utils.contains("MACHINE_FEATURES", "wol", "zgemma-ethwol" , "", d)} \
 	${@bb.utils.contains("MACHINE_FEATURES", "emmc", "zgemma-resizerootfs partitions-by-name" , "", d)} \
