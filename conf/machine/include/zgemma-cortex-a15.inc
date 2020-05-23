@@ -44,5 +44,6 @@ IMAGE_CMD_zgemmc_append = "\
 	cd ${IMGDEPLOYDIR}; \
 	zip ${IMAGE_NAME}_recovery_emmc.zip ${IMAGEDIR}/disk.img ${IMAGEDIR}/imageversion; \
 	zip ${IMAGE_NAME}_usb.zip ${IMAGEDIR}/imageversion ${IMAGEDIR}/kernel.bin ${IMAGEDIR}/rootfs.tar.bz2; \
+	rm -f ${DEPLOY_DIR_IMAGE}/*.tar.bz2; \
 	rm -Rf ${IMAGEDIR}; \
 "

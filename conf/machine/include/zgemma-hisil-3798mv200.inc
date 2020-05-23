@@ -70,6 +70,8 @@ IMAGE_CMD_ubi_append = " \
 	cd ${IMGDEPLOYDIR}/${IMAGEDIR}; \
 	zip -r ../${IMAGE_NAME}_usb.zip *; \
 	cd ..; \
+	rm -f ${DEPLOY_DIR_IMAGE}/*.ubi; \
+	rm -f ${DEPLOY_DIR_IMAGE}/*.ubifs; \
 	rm -Rf ${IMAGEDIR}; \
 	"
 
@@ -101,5 +103,6 @@ IMAGE_CMD_zgemmafastboot8gb_append = " \
 	cd ${IMGDEPLOYDIR}/${IMAGEDIR}; \
 	zip -r ../${IMAGE_NAME}_usb.zip *; \
 	cd ..; \
+	rm -f ${DEPLOY_DIR_IMAGE}/*.tar.bz2; \
 	rm -Rf ${IMAGEDIR}; \
 	"
