@@ -23,6 +23,7 @@ SRC_URI = "http://www.zgemma.org/downloads/linux-${PV}-${SRCDATE}-${ARCH}.tar.gz
 	file://0005-xbox-one-tuner-4.4.patch \
 	file://0006-dvb-media-tda18250-support-for-new-silicon-tuner.patch \
 	file://0007-dvb-mn88472-staging.patch \
+	file://mn88472_reset_stream_ID_reg_if_no_PLP_given.patch \
 	file://Backport_minimal_compiler_attributes_h_to_support_GCC_9.patch \
 	file://0001-remote.patch \
 	file://HauppaugeWinTV-dualHD.patch \
