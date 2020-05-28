@@ -28,7 +28,6 @@ ROOTFS_FILE = "rootfs.ubi"
 
 RCTYPE = "25"
 
-PREFERRED_VERSION_ffmpeg = "3.4.2"
 
 #Provider
 PREFERRED_PROVIDER_virtual/kernel ?= "linux-zgemma"
