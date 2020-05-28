@@ -15,10 +15,10 @@ CHIPSET = "Hi3798Mv200"
 #Provider
 PREFERRED_PROVIDER_virtual/kernel ?= "linux-zgemma"
 PREFERRED_VERSION_linux-zgemma = "4.4.35"
-PREFERRED_PROVIDER_virtual/egl ?= "zgemma-mali-3798mv200"
-PREFERRED_PROVIDER_virtual/libgles1 ?= "zgemma-mali-3798mv200"
-PREFERRED_PROVIDER_virtual/libgles2 ?= "zgemma-mali-3798mv200"
-PREFERRED_PROVIDER_virtual/libgbm ?= "zgemma-mali-3798mv200"
+PREFERRED_PROVIDER_virtual/egl ?= "zgemma-mali-${HICHIPSET}"
+PREFERRED_PROVIDER_virtual/libgles1 ?= "zgemma-mali-${HICHIPSET}"
+PREFERRED_PROVIDER_virtual/libgles2 ?= "zgemma-mali-${HICHIPSET}"
+PREFERRED_PROVIDER_virtual/libgbm ?= "zgemma-mali-${HICHIPSET}"
 PREFERRED_PROVIDER_virtual/libgl ?= "mesa"
 PREFERRED_PROVIDER_virtual/mesa ?= "mesa"
 PREFERRED_PROVIDER_virtual/blindscan-dvbc ?= "zgemma-dvb-modules-${MACHINE}"
@@ -44,7 +44,7 @@ MACHINE_EXTRA_RRECOMMENDS += "\
 MACHINE_FEATURES += " alsa usbhost wlan 3dtv switchoff osdposition hdmicec hisil hisil-3798mv200 mali transcoding wol emmc"
 
 MACHINE_ESSENTIAL_EXTRA_RDEPENDS += "\
-	${@bb.utils.contains("MACHINE_FEATURES", "hisil-3798mv200", "kernel-module-mali-3798mv200 zgemma-mali-3798mv200 zgemma-libs-3798mv200 zgemma-param-3798mv200 zgemma-bootargs-3798mv200 zgemma-bootlogo-3798mv200 zgemma-fastboot-3798mv200" , "", d)} \
+	${@bb.utils.contains("MACHINE_FEATURES", "hisil-${HICHIPSET}", "kernel-module-mali-${HICHIPSET} zgemma-mali-${HICHIPSET} zgemma-libs-${HICHIPSET} zgemma-param-${HICHIPSET} zgemma-bootargs-${HICHIPSET} zgemma-bootlogo-${HICHIPSET} zgemma-fastboot-${HICHIPSET} zgemma-tntfs-${HICHIPSET}" , "", d)} \
 	${@bb.utils.contains("MACHINE_FEATURES", "hisil-recovery", "zgemma-recovery-${HICHIPSET}" , "", d)} \
 	${@bb.utils.contains("MACHINE_FEATURES", "wol", "zgemma-ethwol" , "", d)} \
 	"

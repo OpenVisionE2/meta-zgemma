@@ -52,7 +52,7 @@ MACHINE_EXTRA_RRECOMMENDS += "\
 MACHINE_FEATURES += " alsa usbhost wlan 3dtv switchoff osdposition hdmicec no-opengl hisil hisil-3716mv430 ci"
 
 MACHINE_ESSENTIAL_EXTRA_RDEPENDS += "\
-	${@bb.utils.contains("MACHINE_FEATURES", "hisil-3716mv430", "zgemma-libs-3716mv430 zgemma-param-3716mv430 zgemma-bootargs-3716mv430 zgemma-bootlogo-3716mv430 zgemma-fastboot-3716mv430" , "", d)} \
+	${@bb.utils.contains("MACHINE_FEATURES", "hisil-${HICHIPSET}", "zgemma-libs-${HICHIPSET} zgemma-param-${HICHIPSET} zgemma-bootargs-${HICHIPSET} zgemma-bootlogo-${HICHIPSET} zgemma-fastboot-${HICHIPSET}" , "", d)} \
 	"
 
 IMAGEDIR ?= "zgemma"
