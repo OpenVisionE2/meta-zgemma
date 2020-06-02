@@ -11,7 +11,6 @@ DEFAULTTUNE = "cortexa15hf-neon-vfpv4"
 HICHIPSET = "3798mv200"
 CHIPSET = "Hi3798Mv200"
 
-
 #Provider
 PREFERRED_PROVIDER_virtual/kernel ?= "linux-zgemma"
 PREFERRED_VERSION_linux-zgemma = "4.4.35"
@@ -26,7 +25,6 @@ PREFERRED_PROVIDER_virtual/blindscan-dvbs ?= "zgemma-dvb-modules-${MACHINE}"
 PREFERRED_PROVIDER_virtual/gstreamer1.0-dvbmediasink ?= "gstreamer1.0-plugin-dvbmediasink"
 PREFERRED_PROVIDER_virtual/enigma2-mediaservice ?= "enigma2-plugin-systemplugins-servicehisilicon"
 
-# require conf/machine/include/arm/arch-armv8a.inc
 require conf/machine/include/tune-cortexa15.inc
 require conf/machine/include/zgemma-essential.inc
 
@@ -38,7 +36,6 @@ EXTRA_OECONF_append_pn-enigma2 += " --with-alphablendingacceleration=always --wi
 
 MACHINE_EXTRA_RRECOMMENDS += "\
 	ffmpeg \
-	ntfs-3g \
 	"
 
 MACHINE_FEATURES += " alsa usbhost wlan 3dtv switchoff osdposition hdmicec hisil hisil-3798mv200 mali transcoding wol emmc"

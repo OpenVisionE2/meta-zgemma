@@ -46,7 +46,6 @@ DVBMEDIASINK_CONFIG = "--with-h265 --with-vb8 --with-wma --with-wmv --with-pcm  
 
 MACHINE_EXTRA_RRECOMMENDS += "\
 	ffmpeg \
-	ntfs-3g \
 "
 
 MACHINE_FEATURES += " alsa usbhost wlan 3dtv switchoff osdposition hdmicec no-opengl hisil hisil-3716mv430 ci"
