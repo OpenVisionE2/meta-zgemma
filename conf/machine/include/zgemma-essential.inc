@@ -8,7 +8,7 @@ MACHINE_ESSENTIAL_EXTRA_RDEPENDS += "\
 MACHINE_ESSENTIAL_EXTRA_RRECOMMENDS += "\
 	${@bb.utils.contains("MACHINE_FEATURES", "v3d-nxpl", "zgemma-v3ddriver-${MACHINE}" , "", d)} \
 	${@bb.utils.contains("MACHINE_FEATURES", "bluetooth", "kernel-module-btusb bluez5" , "", d)} \
-	${@bb.utils.contains("MACHINE_FEATURES", "emmc", "resizerootfs partitions-by-name" , "", d)} \
+	${@bb.utils.contains("MACHINE_FEATURES", "emmc", "zgemma-resizerootfs partitions-by-name" , "", d)} \
 	"
 
 BOX_BRAND = "airdigital"
