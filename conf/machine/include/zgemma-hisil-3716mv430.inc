@@ -48,10 +48,11 @@ MACHINE_EXTRA_RRECOMMENDS += "\
 	ffmpeg \
 "
 
-MACHINE_FEATURES += " alsa usbhost wlan 3dtv switchoff osdposition hdmicec no-opengl hisil hisil-3716mv430 ci"
+MACHINE_FEATURES += " alsa usbhost wlan 3dtv switchoff osdposition hdmicec no-opengl hisil hisil-3716mv430 ci ciplus-helper"
 
 MACHINE_ESSENTIAL_EXTRA_RDEPENDS += "\
 	${@bb.utils.contains("MACHINE_FEATURES", "hisil-${HICHIPSET}", "zgemma-libs-${HICHIPSET} zgemma-param-${HICHIPSET} zgemma-bootargs-${HICHIPSET} zgemma-bootlogo-${HICHIPSET} zgemma-fastboot-${HICHIPSET}" , "", d)} \
+	${@bb.utils.contains("MACHINE_FEATURES", "ciplus-helper", "ciplus-helper-${HICHIPSET}" , "", d)} \
 	"
 
 IMAGEDIR ?= "zgemma"
