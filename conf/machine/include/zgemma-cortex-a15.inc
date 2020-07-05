@@ -27,7 +27,7 @@ MACHINE_EXTRA_RRECOMMENDS += "\
 
 DVBMEDIASINK_CONFIG = "--with-h265 --with-vb8 --with-vb9 --with-wma --with-wmv --with-pcm --with-dts --with-eac3"
 
-MACHINE_FEATURES += "alsa usbhost wlan 3dtv switchoff osdposition hdmicec blindscan-tbs"
+MACHINE_FEATURES += "alsa usbhost switchoff osdposition hdmicec blindscan-tbs"
 
 IMAGEDIR ?= "zgemma/${MACHINE}"
 IMGDEPLOYDIR ?= "${DEPLOY_DIR_IMAGE}"
