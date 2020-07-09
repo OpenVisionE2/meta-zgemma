@@ -2,6 +2,7 @@ KV = "4.4.35"
 SRCDATE = "20200625"
 
 PROVIDES = "virtual/blindscan-dvbc virtual/blindscan-dvbs"
+RDEPENDS_${PN} = "libjpeg-turbo"
 
 require zgemma-dvb-modules.inc
 
