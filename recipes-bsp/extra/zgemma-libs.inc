@@ -7,7 +7,7 @@ RDEPENDS_${PN} = "libbluray"
 
 PACKAGE_ARCH = "${MACHINE_ARCH}"
 
-PR = "${SRCDATE}"
+PV = "${SRCDATE}"
 
 SRC_URI = "http://www.zgemma.org/downloads/zgemma-libs-${HICHIPSET}-${SRCDATE}.zip"
 
