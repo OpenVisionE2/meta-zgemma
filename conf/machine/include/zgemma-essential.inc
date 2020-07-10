@@ -11,3 +11,5 @@ MACHINE_ESSENTIAL_EXTRA_RRECOMMENDS += "\
 	"
 
 BOX_BRAND = "airdigital"
+
+IMAGEDIR = "zgemma/${MACHINE}"

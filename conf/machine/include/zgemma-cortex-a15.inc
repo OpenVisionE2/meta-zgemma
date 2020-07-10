@@ -29,9 +29,6 @@ DVBMEDIASINK_CONFIG = "--with-h265 --with-vb8 --with-vb9 --with-wma --with-wmv -
 
 MACHINE_FEATURES += "alsa usbhost switchoff osdposition hdmicec blindscan-tbs"
 
-IMAGEDIR ?= "zgemma/${MACHINE}"
-IMGDEPLOYDIR ?= "${DEPLOY_DIR_IMAGE}"
-
 IMAGE_CMD_zgemmc_append = "\
 	mkdir -p ${IMGDEPLOYDIR}/${IMAGEDIR}; \
 	cp ${IMGDEPLOYDIR}/${IMAGE_NAME}.emmc.img ${IMGDEPLOYDIR}/${IMAGEDIR}/disk.img; \
