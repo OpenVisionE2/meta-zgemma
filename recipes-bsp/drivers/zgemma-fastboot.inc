@@ -2,8 +2,10 @@ SUMMARY = "${MACHINE} fastboot files"
 SECTION = "base"
 PRIORITY = "required"
 LICENSE = "CLOSED"
-PR = "${SRCDATE}"
+
 PACKAGE_ARCH = "${MACHINE_ARCH}"
+
+PV = "${SRCDATE}"
 
 inherit deploy
 
