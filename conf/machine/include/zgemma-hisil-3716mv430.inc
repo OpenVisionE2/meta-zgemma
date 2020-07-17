@@ -15,8 +15,8 @@ CHIPSET = "Hi3716Mv430"
 IMAGE_CLASSES += " zgemma-ubi_image"
 IMAGE_FSTYPES += " ubi zgemmaubi"
 
-MKUBIFS_ARGS = "-m 2048 -e 126976 -c 4096"
-UBINIZE_ARGS = "-m 2048 -p 128KiB"
+MKUBIFS_ARGS = "-m 4096 -e 253952 -c 2048"
+UBINIZE_ARGS = "-m 4096 -p 256KiB -s 4096"
 
 UBI_VOLNAME = "rootfs"
 CMDLINE ?= "console=ttyAMA0,115200n8"
