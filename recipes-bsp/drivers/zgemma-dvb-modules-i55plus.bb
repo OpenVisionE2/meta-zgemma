@@ -6,8 +6,8 @@ RDEPENDS_${PN} = "libjpeg-turbo"
 
 require zgemma-dvb-modules.inc
 
-SRC_URI[arm.md5sum] = "7ef506afa638d6ab1909f00a253b544d"
-SRC_URI[arm.sha256sum] = "65972ccaa99b9cfef49d9d31a5a164c2814c8a9dba04fd25e837de473ce49038"
+SRC_URI[md5sum] = "7ef506afa638d6ab1909f00a253b544d"
+SRC_URI[sha256sum] = "65972ccaa99b9cfef49d9d31a5a164c2814c8a9dba04fd25e837de473ce49038"
 
 COMPATIBLE_MACHINE = "^(i55plus)$"
 

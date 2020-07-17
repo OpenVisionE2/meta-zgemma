@@ -3,8 +3,8 @@ SRCDATE = "20200525"
 
 require zgemma-dvb-modules.inc
 
-SRC_URI[mips.md5sum] = ""
-SRC_URI[mips.sha256sum] = ""
+SRC_URI[md5sum] = ""
+SRC_URI[sha256sum] = ""
 
 COMPATIBLE_MACHINE = "^(h0)$"
 
