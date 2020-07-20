@@ -1,8 +1,6 @@
 SUMMARY = "Zgemma create swap"
 LICENSE = "CLOSED"
 
-PV = "1.0"
-
 SRC_URI="file://createswap.sh"
 
 do_install() {

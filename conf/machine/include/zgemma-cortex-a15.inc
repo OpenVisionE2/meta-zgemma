@@ -6,6 +6,20 @@ MACHINE_FEATURES_BACKFILL_CONSIDERED += "rtc"
 TARGET_ARCH = "arm"
 DEFAULTTUNE = "cortexa15hf-neon-vfpv4"
 
+IMAGE_CLASSES += "zgemma-emmc_image_multiboot"
+IMAGE_FSTYPES += "zgemmc tar"
+IMAGE_ROOTFS_SIZE ?= "294912"
+
+CHIPSET = "bcm7251s"
+RCTYPE = "21"
+
+MTD_BOOTFS = "mmcblk0p1"
+MTD_ROOTFS = "mmcblk0p3"
+MTD_KERNEL = "mmcblk0p2"
+KERNEL_FILE = "kernel.bin"
+ROOTFS_FILE = "rootfs.tar.bz2"
+MTD_BLACK  = "mmcblk0"
+
 #Provider
 PREFERRED_PROVIDER_virtual/kernel ?= "linux-zgemma"
 PREFERRED_VERSION_linux-zgemma = "4.10.12"
@@ -23,11 +37,12 @@ require conf/machine/include/zgemma-essential.inc
 
 MACHINE_EXTRA_RRECOMMENDS += "\
 	gstreamer1.0-plugin-dvbmediasink \
+	${@bb.utils.contains('MACHINE_FEATURES', 'swap', 'zgemma-swapcreate', '',d)} \
 	"
 
 DVBMEDIASINK_CONFIG = "--with-h265 --with-vb8 --with-vb9 --with-wma --with-wmv --with-pcm --with-dts --with-eac3"
 
-MACHINE_FEATURES += "alsa usbhost switchoff osdposition hdmicec blindscan-tbs"
+MACHINE_FEATURES += "alsa usbhost switchoff osdposition hdmicec blindscan-tbs textlcd 7segment dvb-c v3d-nxpl emmc ci mountboot blindscan-dvbs swap AV_JACK HDMI"
 
 IMAGE_CMD_zgemmc_append = "\
 	mkdir -p ${IMGDEPLOYDIR}/${IMAGEDIR}; \

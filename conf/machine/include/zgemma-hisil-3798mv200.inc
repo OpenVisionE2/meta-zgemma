@@ -23,7 +23,7 @@ PREFERRED_PROVIDER_virtual/mesa ?= "mesa"
 PREFERRED_PROVIDER_virtual/blindscan-dvbc ?= "zgemma-dvb-modules-${MACHINE}"
 PREFERRED_PROVIDER_virtual/blindscan-dvbs ?= "zgemma-dvb-modules-${MACHINE}"
 PREFERRED_PROVIDER_virtual/gstreamer1.0-dvbmediasink ?= "gstreamer1.0-plugin-dvbmediasink"
-PREFERRED_PROVIDER_virtual/enigma2-mediaservice ?= "enigma2-plugin-systemplugins-servicehisilicon"
+PREFERRED_PROVIDER_virtual/enigma2-mediaservice = "enigma2-plugin-systemplugins-servicehisilicon"
 
 require conf/machine/include/tune-cortexa15.inc
 require conf/machine/include/zgemma-essential.inc
@@ -38,7 +38,7 @@ MACHINE_EXTRA_RRECOMMENDS += "\
 	ffmpeg \
 	"
 
-MACHINE_FEATURES += " alsa usbhost switchoff osdposition hdmicec hisil hisil-3798mv200 mali transcoding wol emmc"
+MACHINE_FEATURES += " alsa usbhost switchoff osdposition hdmicec hisil hisil-3798mv200 mali multitranscoding dvb-c wol emmc blindscan-tbs HDMI"
 
 MACHINE_ESSENTIAL_EXTRA_RDEPENDS += "\
 	${@bb.utils.contains("MACHINE_FEATURES", "hisil-${HICHIPSET}", "kernel-module-mali-${HICHIPSET} zgemma-mali-${HICHIPSET} zgemma-libs-${HICHIPSET} zgemma-param-${HICHIPSET} zgemma-bootargs-${HICHIPSET} zgemma-bootlogo-${HICHIPSET} zgemma-fastboot-${HICHIPSET} zgemma-tntfs-${HICHIPSET}" , "", d)} \
