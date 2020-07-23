@@ -74,7 +74,7 @@ SERIAL_CONSOLE_mipsel ?= ""
 
 KERNEL_EXTRA_ARGS_mipsel = "EXTRA_CFLAGS=-Wno-attribute-alias"
 
-pkg_postinst_kernel-image_mipsel() {
+pkg_postinst_${KERNEL_PACKAGE_NAME}-image_mipsel() {
 	if [ "x$D" == "x" ]; then
 		if [ -f /${KERNEL_IMAGEDEST}/${KERNEL_IMAGETYPE} ] ; then
 			flash_eraseall /dev/mtd1
@@ -100,7 +100,7 @@ kernel_do_install_append_arm() {
         install -m 0755 ${WORKDIR}/findkerneldevice.sh ${D}/${KERNEL_IMAGEDEST}
 }
 
-pkg_postinst_kernel-image_arm() {
+pkg_postinst_${KERNEL_PACKAGE_NAME}-image_arm() {
 	if [ "x$D" == "x" ]; then
 		if [ -f /${KERNEL_IMAGEDEST}/${KERNEL_IMAGETYPE} ] ; then
 			/${KERNEL_IMAGEDEST}/./findkerneldevice.sh
