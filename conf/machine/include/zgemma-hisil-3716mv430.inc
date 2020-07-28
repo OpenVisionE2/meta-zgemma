@@ -12,6 +12,8 @@ SOC_FAMILY = "hisi3716mv430"
 HICHIPSET = "3716mv430"
 CHIPSET = "Hi3716Mv430"
 
+STB_PLATFORM = "zgemmahisi3716mv430"
+
 IMAGE_CLASSES += " zgemma-ubi_image"
 IMAGE_FSTYPES += " ubi zgemmaubi"
 

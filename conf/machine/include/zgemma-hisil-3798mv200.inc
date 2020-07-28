@@ -12,6 +12,8 @@ SOC_FAMILY = "hisi3798mv200"
 HICHIPSET = "3798mv200"
 CHIPSET = "Hi3798Mv200"
 
+STB_PLATFORM = "zgemmahisi3798mv200"
+
 #Provider
 PREFERRED_PROVIDER_virtual/kernel ?= "linux-zgemma"
 PREFERRED_VERSION_linux-zgemma = "4.4.35"
