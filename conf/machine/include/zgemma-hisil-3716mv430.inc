@@ -3,7 +3,7 @@ DISTRO_FEATURES_remove += "x11 directfb"
 KERNEL_MODULE_AUTOLOAD += "xfs"
 
 # We know about rtc
-MACHINE_FEATURES_BACKFILL_CONSIDERED = "rtc"
+MACHINE_FEATURES_BACKFILL_CONSIDERED += "rtc"
 
 TARGET_ARCH = "arm"
 DEFAULTTUNE = "cortexa7thf"
@@ -31,9 +31,9 @@ ROOTFS_FILE = "rootfs.ubi"
 RCTYPE = "25"
 
 #Provider
-PREFERRED_PROVIDER_virtual/kernel ?= "linux-zgemma"
+PREFERRED_PROVIDER_virtual/kernel = "linux-zgemma"
 PREFERRED_VERSION_linux-zgemma = "4.4.35"
-PREFERRED_PROVIDER_virtual/gstreamer1.0-dvbmediasink ?= "gstreamer1.0-plugin-dvbmediasink"
+PREFERRED_PROVIDER_virtual/gstreamer1.0-dvbmediasink = "gstreamer1.0-plugin-dvbmediasink"
 PREFERRED_PROVIDER_virtual/enigma2-mediaservice = "enigma2-plugin-systemplugins-servicehisilicon"
 
 require conf/machine/include/tune-cortexa7.inc
@@ -49,7 +49,7 @@ MACHINE_EXTRA_RRECOMMENDS += "\
 	ffmpeg \
 "
 
-MACHINE_FEATURES += " alsa usbhost switchoff osdposition hdmicec no-opengl hisil hisil-3716mv430 ci ciplus-helper blindscan-tbs HDMI"
+MACHINE_FEATURES += "alsa usbhost switchoff osdposition hdmicec no-opengl hisil hisil-3716mv430 ci ciplus-helper blindscan-tbs HDMI"
 
 MACHINE_ESSENTIAL_EXTRA_RDEPENDS += "\
 	${@bb.utils.contains("MACHINE_FEATURES", "hisil-${HICHIPSET}", "zgemma-libs-${HICHIPSET} zgemma-param-${HICHIPSET} zgemma-bootargs-${HICHIPSET} zgemma-bootlogo-${HICHIPSET} zgemma-fastboot-${HICHIPSET}" , "", d)} \

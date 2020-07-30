@@ -21,7 +21,7 @@ ROOTFS_FILE = "rootfs.tar.bz2"
 MTD_BLACK  = "mmcblk0"
 
 #Provider
-PREFERRED_PROVIDER_virtual/kernel ?= "linux-zgemma"
+PREFERRED_PROVIDER_virtual/kernel = "linux-zgemma"
 PREFERRED_VERSION_linux-zgemma = "4.10.12"
 PREFERRED_PROVIDER_virtual/egl ?= "zgemma-v3ddriver-${MACHINE}"
 PREFERRED_PROVIDER_virtual/libgles1 ?= "zgemma-v3ddriver-${MACHINE}"
@@ -29,8 +29,8 @@ PREFERRED_PROVIDER_virtual/libgles2 ?= "zgemma-v3ddriver-${MACHINE}"
 PREFERRED_PROVIDER_virtual/libgbm ?= "zgemma-v3ddriver-${MACHINE}"
 PREFERRED_PROVIDER_virtual/libgl ?= "mesa"
 PREFERRED_PROVIDER_virtual/mesa ?= "mesa"
-PREFERRED_PROVIDER_virtual/blindscan-dvbc ?= "zgemma-dvb-modules-${MACHINE}"
-PREFERRED_PROVIDER_virtual/blindscan-dvbs ?= "zgemma-dvb-modules-${MACHINE}"
+PREFERRED_PROVIDER_virtual/blindscan-dvbc = "zgemma-dvb-modules-${MACHINE}"
+PREFERRED_PROVIDER_virtual/blindscan-dvbs = "zgemma-dvb-modules-${MACHINE}"
 
 require conf/machine/include/tune-cortexa15.inc
 require conf/machine/include/zgemma-essential.inc

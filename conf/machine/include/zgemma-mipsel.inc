@@ -4,7 +4,7 @@ KERNEL_MODULE_AUTOLOAD += "xfs"
 MACHINE_FEATURES_BACKFILL_CONSIDERED += "rtc"
 
 #Provider
-PREFERRED_PROVIDER_virtual/kernel ?= "linux-zgemma"
+PREFERRED_PROVIDER_virtual/kernel = "linux-zgemma"
 PREFERRED_VERSION_linux-zgemma = "4.10.12"
 PREFERRED_PROVIDER_virtual/egl ?= "zgemma-v3ddriver-${MACHINE}"
 PREFERRED_PROVIDER_virtual/libgles1 ?= "zgemma-v3ddriver-${MACHINE}"
@@ -22,7 +22,7 @@ KERNEL_FILE = "kernel.bin"
 ROOTFS_FILE = "rootfs.bin"
 
 TARGET_ARCH = "mipsel"
-DEFAULTTUNE ?= "mips32el"
+DEFAULTTUNE = "mips32el"
 
 require conf/machine/include/tune-mips32.inc
 require conf/machine/include/zgemma-essential.inc
