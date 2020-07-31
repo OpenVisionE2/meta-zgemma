@@ -77,8 +77,8 @@ KERNEL_EXTRA_ARGS_mipsel = "EXTRA_CFLAGS=-Wno-attribute-alias"
 pkg_postinst_${KERNEL_PACKAGE_NAME}-image_mipsel() {
 	if [ "x$D" == "x" ]; then
 		if [ -f /${KERNEL_IMAGEDEST}/${KERNEL_IMAGETYPE} ] ; then
-			flash_eraseall /dev/mtd1
-			nandwrite -p /dev/mtd1 /${KERNEL_IMAGEDEST}/${KERNEL_IMAGETYPE}
+			flash_eraseall /dev/${MTD_KERNEL}
+			nandwrite -p /dev/${MTD_KERNEL} /${KERNEL_IMAGEDEST}/${KERNEL_IMAGETYPE}
 		fi
 	fi
 	true
