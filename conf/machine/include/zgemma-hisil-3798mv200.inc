@@ -101,3 +101,5 @@ IMAGE_CMD_zgemmafastboot8gb_append = " \
 	rm -f ${DEPLOY_DIR_IMAGE}/*.tar.bz2; \
 	rm -Rf zgemma; \
 	"
+
+EXTRA_ALSA = "mv200"
