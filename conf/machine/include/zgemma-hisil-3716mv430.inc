@@ -19,7 +19,6 @@ IMAGE_FSTYPES += " ubi zgemmaubi"
 MKUBIFS_ARGS = "-m 4096 -e 253952 -c 2048"
 UBINIZE_ARGS = "-m 4096 -p 256KiB -s 4096"
 
-UBI_VOLNAME = "rootfs"
 CMDLINE ?= "console=ttyAMA0,115200n8"
 
 MTD_KERNEL = "mtd9"

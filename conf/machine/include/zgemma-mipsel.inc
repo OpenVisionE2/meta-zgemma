@@ -13,7 +13,6 @@ PREFERRED_PROVIDER_virtual/libgl ?= "mesa"
 PREFERRED_PROVIDER_virtual/mesa ?= "mesa"
 
 IMAGE_FSTYPES += "ubi"
-UBI_VOLNAME = "rootfs"
 
 MTD_KERNEL = "mtd1"
 MTD_ROOTFS = "mtd2"
