@@ -1,4 +1,4 @@
-DISTRO_FEATURES_append += "opengl"
+DISTRO_FEATURES_append = " opengl"
 
 
 # We know about rtc
@@ -34,7 +34,7 @@ require conf/machine/include/zgemma-essential.inc
 DVBMEDIASINK_CONFIG = "--with-h265 --with-vb8 --with-vb9 --with-wma --with-wmv --with-pcm --with-eac3 --with-amr"
 
 # E2 OSD settings
-EXTRA_OECONF_append_pn-enigma2 += " --with-alphablendingacceleration=always --with-blitaccelerationthreshold=250 --with-fillaccelerationthreshold=190000"
+EXTRA_OECONF_append_pn-enigma2 = " --with-alphablendingacceleration=always --with-blitaccelerationthreshold=250 --with-fillaccelerationthreshold=190000"
 
 MACHINE_EXTRA_RRECOMMENDS += "\
 	ffmpeg \

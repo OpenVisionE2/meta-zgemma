@@ -13,8 +13,8 @@ CHIPSET = "Hi3716Mv430"
 
 STB_PLATFORM = "zgemmahisi3716mv430"
 
-IMAGE_CLASSES += " zgemma-ubi_image"
-IMAGE_FSTYPES += " ubi zgemmaubi"
+IMAGE_CLASSES += "zgemma-ubi_image"
+IMAGE_FSTYPES += "ubi zgemmaubi"
 
 MKUBIFS_ARGS = "-m 4096 -e 253952 -c 2048"
 UBINIZE_ARGS = "-m 4096 -p 256KiB -s 4096"
@@ -38,7 +38,7 @@ require conf/machine/include/tune-cortexa7.inc
 require conf/machine/include/zgemma-essential.inc
 
 # E2 OSD settings
-EXTRA_OECONF_append_pn-enigma2 += " --with-alphablendingacceleration=always --with-blitaccelerationthreshold=250 --with-fillaccelerationthreshold=190000"
+EXTRA_OECONF_append_pn-enigma2 = " --with-alphablendingacceleration=always --with-blitaccelerationthreshold=250 --with-fillaccelerationthreshold=190000"
 
 # Gstreamer dvbmediasink
 DVBMEDIASINK_CONFIG = "--with-h265 --with-vb8 --with-wma --with-wmv --with-pcm  --with-eac3 --with-amr --with-spark"
