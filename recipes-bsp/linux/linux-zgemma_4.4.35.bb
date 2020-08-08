@@ -32,11 +32,8 @@ SRC_URI = "http://www.zgemma.org/downloads/linux-${PV}-${SRCDATE}-${ARCH}.tar.gz
 	file://wifi-linux_4.4.183.patch \
 	file://initramfs-subdirboot.cpio.gz;unpack=0 \
 	file://findkerneldevice.sh \
-"
-
-SRC_URI_append_h9 += "file://0001-mmc-switch-1.8V.patch"
-
-SRC_URI_append_i55plus += "file://0001-mmc-switch-1.8V.patch"
+	${@bb.utils.contains_any("MACHINE", "h9 i55plus", "file://0001-mmc-switch-1.8V.patch", "", d)} \
+	"
 
 # By default, kernel.bbclass modifies package names to allow multiple kernels
 # to be installed in parallel. We revert this change and rprovide the versioned
