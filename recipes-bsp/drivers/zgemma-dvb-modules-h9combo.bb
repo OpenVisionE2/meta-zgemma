@@ -1,4 +1,3 @@
-KV = "4.4.35"
 SRCDATE = "20200720"
 
 PROVIDES = "virtual/blindscan-dvbc virtual/blindscan-dvbs"

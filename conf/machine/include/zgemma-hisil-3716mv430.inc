@@ -1,5 +1,6 @@
 DISTRO_FEATURES_remove += "x11 directfb"
 
+KERNELVERSION = "4.4.35"
 
 # We know about rtc
 MACHINE_FEATURES_BACKFILL_CONSIDERED += "rtc"
@@ -30,7 +31,7 @@ RCTYPE = "25"
 
 #Provider
 PREFERRED_PROVIDER_virtual/kernel = "linux-zgemma"
-PREFERRED_VERSION_linux-zgemma = "4.4.35"
+PREFERRED_VERSION_linux-zgemma = "${KERNELVERSION}"
 PREFERRED_PROVIDER_virtual/gstreamer1.0-dvbmediasink = "gstreamer1.0-plugin-dvbmediasink"
 PREFERRED_PROVIDER_virtual/enigma2-mediaservice = "enigma2-plugin-systemplugins-servicehisilicon"
 
@@ -45,7 +46,7 @@ DVBMEDIASINK_CONFIG = "--with-h265 --with-vb8 --with-wma --with-wmv --with-pcm  
 
 MACHINE_EXTRA_RRECOMMENDS += "\
 	ffmpeg \
-"
+	"
 
 MACHINE_FEATURES += "alsa usbhost switchoff osdposition hdmicec no-opengl hisil hisil-3716mv430 ci ciplus-helper blindscan-tbs HDMI"
 

@@ -5,9 +5,9 @@ LIC_FILES_CHKSUM = "file://COPYING;md5=d7810fab7487fb0aad327b76f1be7cd7"
 
 PACKAGE_ARCH = "${MACHINE_ARCH}"
 
-KERNEL_RELEASE = "4.4.35"
+KERNEL_RELEASE = "${KERNELVERSION}"
 SRCDATE = "20200508"
-COMPATIBLE_MACHINE = "^(h9|h9combo|h10|i55plus|h0)$"
+COMPATIBLE_MACHINE = "^(h9|h9combo|h10|i55plus|h0|h8)$"
 
 inherit kernel machine_kernel_pr samba_change_dialect
 

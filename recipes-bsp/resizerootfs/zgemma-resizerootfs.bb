@@ -4,7 +4,6 @@ require conf/license/license-gplv2.inc
 COMPATIBLE_MACHINE = "^(h7|h9|h9combo|h10|i55plus)$"
 
 RDEPENDS_${PN} = "e2fsprogs-resize2fs"
-PV = "1.0"
 
 SRC_URI = "file://resizerootfs"
 

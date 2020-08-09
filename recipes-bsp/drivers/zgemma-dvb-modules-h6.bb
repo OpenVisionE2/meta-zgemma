@@ -1,4 +1,3 @@
-KV = "4.10.12"
 SRCDATE = "20180830"
 
 require zgemma-dvb-modules.inc

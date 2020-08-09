@@ -1,5 +1,6 @@
 DISTRO_FEATURES_append = " opengl"
 
+KERNELVERSION = "4.4.35"
 
 # We know about rtc
 MACHINE_FEATURES_BACKFILL_CONSIDERED += "rtc"
@@ -15,7 +16,7 @@ STB_PLATFORM = "zgemmahisi3798mv200"
 
 #Provider
 PREFERRED_PROVIDER_virtual/kernel = "linux-zgemma"
-PREFERRED_VERSION_linux-zgemma = "4.4.35"
+PREFERRED_VERSION_linux-zgemma = "${KERNELVERSION}"
 PREFERRED_PROVIDER_virtual/egl ?= "zgemma-mali-${HICHIPSET}"
 PREFERRED_PROVIDER_virtual/libgles1 ?= "zgemma-mali-${HICHIPSET}"
 PREFERRED_PROVIDER_virtual/libgles2 ?= "zgemma-mali-${HICHIPSET}"

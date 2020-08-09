@@ -5,6 +5,8 @@ LICENSE = "CLOSED"
 
 PACKAGE_ARCH = "${MACHINE_ARCH}"
 
+KV = "${KERNELVERSION}"
+
 PV = "${KV}-${SRCDATE}"
 
 SRC_URI = "http://www.zgemma.org/downloads/${MACHINE}-drivers-${PV}.zip"
