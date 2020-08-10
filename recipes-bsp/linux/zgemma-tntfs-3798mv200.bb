@@ -6,7 +6,6 @@ require conf/license/license-close.inc
 
 COMPATIBLE_MACHINE = "^(h9|h9combo|h10|i55plus)$"
 
-KV = "${KERNELVERSION}"
 SRCDATE = "20200528"
 
 SRC_URI[md5sum] = "4841409cb7dd8e2104f101d6f70d7aef"
