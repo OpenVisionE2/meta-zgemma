@@ -11,7 +11,7 @@ IMAGE_FSTYPES += "zgemmc tar"
 IMAGE_ROOTFS_SIZE ?= "294912"
 
 SOC_FAMILY = "bcm7251s"
-RCTYPE = "21"
+RCTYPE = "28"
 
 MTD_BOOTFS = "mmcblk0p1"
 MTD_ROOTFS = "mmcblk0p3"
