@@ -8,7 +8,7 @@ PACKAGE_ARCH = "${MACHINE_ARCH}"
 
 PV = "${KV}-${SRCDATE}"
 
-SRC_URI = "http://www.zgemma.org/downloads/${MACHINE}-drivers-${PV}.zip"
+SRC_URI = "http://www.zgemma.org/downloads/${MACHINETYPE}-drivers-${PV}.zip"
 
 S = "${WORKDIR}"
 
