@@ -55,6 +55,7 @@ KERNEL_OUTPUT = "arch/${ARCH}/boot/${KERNEL_IMAGETYPE}"
 FILES_${KERNEL_PACKAGE_NAME}-image_h9 = " "
 FILES_${KERNEL_PACKAGE_NAME}-image_i5plus = " "
 FILES_${KERNEL_PACKAGE_NAME}-image_h0 = " "
+FILES_${KERNEL_PACKAGE_NAME}-image_h8 = " "
 FILES_${KERNEL_PACKAGE_NAME}-image = "/${KERNEL_IMAGEDEST}/findkerneldevice.sh"
 
 kernel_do_configure_prepend() {
@@ -93,6 +94,16 @@ pkg_postinst_${KERNEL_PACKAGE_NAME}-image_i55plus() {
 }
 
 pkg_postinst_${KERNEL_PACKAGE_NAME}-image_h0() {
+	if [ "x$D" == "x" ]; then
+		if [ -f /${KERNEL_IMAGEDEST}/${KERNEL_IMAGETYPE} ] ; then
+			flash_eraseall /dev/${MTD_KERNEL}
+			nandwrite -p /dev/${MTD_KERNEL} /${KERNEL_IMAGEDEST}/${KERNEL_IMAGETYPE}
+		fi
+	fi
+	true
+}
+
+pkg_postinst_${KERNEL_PACKAGE_NAME}-image_h8() {
 	if [ "x$D" == "x" ]; then
 		if [ -f /${KERNEL_IMAGEDEST}/${KERNEL_IMAGETYPE} ] ; then
 			flash_eraseall /dev/${MTD_KERNEL}

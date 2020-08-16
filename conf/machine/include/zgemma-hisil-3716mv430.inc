@@ -48,7 +48,7 @@ MACHINE_EXTRA_RRECOMMENDS += "\
 	ffmpeg \
 	"
 
-MACHINE_FEATURES += "alsa usbhost switchoff osdposition hdmicec no-opengl hisil hisil-3716mv430 ci ciplus-helper blindscan-tbs HDMI"
+MACHINE_FEATURES += "alsa usbhost switchoff osdposition hdmicec no-opengl hisil hisil-3716mv430 ci blindscan-tbs HDMI"
 
 MACHINE_ESSENTIAL_EXTRA_RDEPENDS += "\
 	${@bb.utils.contains("MACHINE_FEATURES", "hisil-${HICHIPSET}", "zgemma-libs-${HICHIPSET} zgemma-param-${HICHIPSET} zgemma-bootargs-${HICHIPSET} zgemma-bootlogo-${HICHIPSET} zgemma-fastboot-${HICHIPSET}" , "", d)} \
