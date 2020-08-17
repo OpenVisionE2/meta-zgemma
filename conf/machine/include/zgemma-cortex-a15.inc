@@ -40,7 +40,7 @@ MACHINE_EXTRA_RRECOMMENDS += "\
 	${@bb.utils.contains('MACHINE_FEATURES', 'swap', 'zgemma-swapcreate', '',d)} \
 	"
 
-DVBMEDIASINK_CONFIG = "--with-h265 --with-vb8 --with-vb9 --with-wma --with-wmv --with-pcm --with-dts --with-eac3"
+DVBMEDIASINK_CONFIG = "--with-wma --with-wmv --with-pcm --with-dts --with-eac3 --with-h265 --with-vb6 --with-vb8 --with-vb9 --with-spark"
 
 MACHINE_FEATURES += "alsa usbhost switchoff osdposition hdmicec blindscan-tbs textlcd 7segment dvb-c v3d-nxpl emmc ci mountboot blindscan-dvbs swap AV_JACK HDMI"
 

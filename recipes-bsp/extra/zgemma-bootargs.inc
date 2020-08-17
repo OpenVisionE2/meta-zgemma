@@ -9,8 +9,6 @@ PV = "${SRCDATE}"
 
 inherit deploy
 
-SRC_URI = "http://www.zgemma.org/downloads/zgemma-bootargs-${HICHIPSET}-${SRCDATE}.zip"
-
 S = "${WORKDIR}"
 
 ALLOW_EMPTY_${PN} = "1"

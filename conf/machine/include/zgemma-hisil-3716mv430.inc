@@ -28,6 +28,7 @@ KERNEL_FILE = "uImage"
 ROOTFS_FILE = "rootfs.ubi"
 
 RCTYPE = "25"
+RCNAME = "zgemma5"
 
 #Provider
 PREFERRED_PROVIDER_virtual/kernel = "linux-zgemma"
@@ -42,17 +43,22 @@ require conf/machine/include/zgemma-essential.inc
 EXTRA_OECONF_append_pn-enigma2 = " --with-alphablendingacceleration=always --with-blitaccelerationthreshold=250 --with-fillaccelerationthreshold=190000"
 
 # Gstreamer dvbmediasink
-DVBMEDIASINK_CONFIG = "--with-h265 --with-vb8 --with-wma --with-wmv --with-pcm  --with-eac3 --with-amr --with-spark"
+DVBMEDIASINK_CONFIG = "--with-wma --with-wmv --with-pcm --with-dts --with-eac3 --with-h265 --with-vb6 --with-vb8 -with-spark"
 
 MACHINE_EXTRA_RRECOMMENDS += "\
 	ffmpeg \
 	"
 
-MACHINE_FEATURES += "alsa usbhost switchoff osdposition hdmicec no-opengl hisil hisil-3716mv430 ci blindscan-tbs HDMI"
+MACHINE_FEATURES += "alsa usbhost switchoff osdposition hdmicec no-opengl hisil hisil-3716mv430 ci blindscan-tbs HDMI wol novp9"
 
 MACHINE_ESSENTIAL_EXTRA_RDEPENDS += "\
-	${@bb.utils.contains("MACHINE_FEATURES", "hisil-${HICHIPSET}", "zgemma-libs-${HICHIPSET} zgemma-param-${HICHIPSET} zgemma-bootargs-${HICHIPSET} zgemma-bootlogo-${HICHIPSET} zgemma-fastboot-${HICHIPSET}" , "", d)} \
+	${@bb.utils.contains("MACHINE_FEATURES", "hisil-${HICHIPSET}", "zgemma-libs-${HICHIPSET} zgemma-param-${HICHIPSET} zgemma-bootargs-${HICHIPSET} zgemma-bootlogo-${HICHIPSET} zgemma-fastboot-${HICHIPSET} zgemma-tntfs-${HICHIPSET}" , "", d)} \
+	${@bb.utils.contains("MACHINE_FEATURES", "wol", "zgemma-ethwol" , "", d)} \
 	${@bb.utils.contains("MACHINE_FEATURES", "ciplus-helper", "ciplus-helper-${HICHIPSET}" , "", d)} \
+	firmware-rtl8192eu \
+	kernel-module-extrawlan-rtl8192eu \
+	firmware-mt7601u \
+	kernel-module-mt7601u \
 	"
 
 IMAGE_CMD_ubi_append = " \

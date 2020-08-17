@@ -9,8 +9,6 @@ PACKAGE_ARCH = "${MACHINE_ARCH}"
 
 PV = "${SRCDATE}"
 
-SRC_URI = "http://www.zgemma.org/downloads/zgemma-libs-${HICHIPSET}-${SRCDATE}.zip"
-
 S = "${WORKDIR}"
 
 INHIBIT_PACKAGE_STRIP = "1"

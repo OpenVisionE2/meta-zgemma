@@ -2,8 +2,9 @@ SRCDATE = "20200508"
 
 require zgemma-param.inc
 
-SRC_URI[md5sum] = ""
-SRC_URI[sha256sum] = ""
+SRC_URI[md5sum] = "afeac6c1e9e19fc705276e753bf3e967"
+SRC_URI[sha256sum] = "394c7e8b2d42685f899090dbfa18b422d9c1e710f6fb16141d52f467a9867367"
 
 COMPATIBLE_MACHINE = "^(h0|h8)$"
 
+SRC_URI = "http://source.mynonpublic.com/zgemma/zgemma-param-${HICHIPSET}-${SRCDATE}.zip"
