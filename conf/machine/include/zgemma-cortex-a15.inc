@@ -8,7 +8,7 @@ DEFAULTTUNE = "cortexa15hf-neon-vfpv4"
 
 IMAGE_CLASSES += "zgemma-emmc_image_multiboot"
 IMAGE_FSTYPES += "zgemmc tar"
-IMAGE_ROOTFS_SIZE ?= "294912"
+IMAGE_ROOTFS_SIZE ?= "589824"
 
 SOC_FAMILY = "bcm7251s"
 RCTYPE = "28"

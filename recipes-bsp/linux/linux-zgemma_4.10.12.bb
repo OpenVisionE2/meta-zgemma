@@ -7,7 +7,7 @@ PACKAGE_ARCH = "${MACHINE_ARCH}"
 
 KERNEL_RELEASE = "${KERNELVERSION}"
 
-COMPATIBLE_MACHINE = "^(sh1|h3|h4|h5|h6|h7|lc|i55)$"
+COMPATIBLE_MACHINE = "^(sh1|h3|h4|h5|h6|h7|lc|i55|novacombo|novaip|novatwin)$"
 
 inherit kernel machine_kernel_pr samba_change_dialect
 

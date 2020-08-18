@@ -1,6 +1,8 @@
 DESCRIPTION = "Ci-helper"
 LICENSE = "CLOSED"
 
+FILESEXTRAPATHS_prepend := "${THISDIR}/ciplus-helper:"
+
 SRC_URI = "http://www.zgemma.org/downloads/ciplushelper-${HICHIPSET}-${SRCDATE}.zip \
 	file://ciplushelper.sh \
 	"
