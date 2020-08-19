@@ -8,7 +8,7 @@ KERNELVERSION = "4.4.35"
 MACHINE_FEATURES_BACKFILL_CONSIDERED += "rtc"
 
 TARGET_ARCH = "arm"
-DEFAULTTUNE = "cortexa7thf"
+DEFAULTTUNE = "cortexa7hf"
 
 SOC_FAMILY = "hisi3716mv430"
 HICHIPSET = "3716mv430"
@@ -51,7 +51,7 @@ MACHINE_EXTRA_RRECOMMENDS += "\
 	ffmpeg \
 	"
 
-MACHINE_FEATURES += "alsa usbhost switchoff osdposition hdmicec no-opengl hisil hisil-3716mv430 blindscan-tbs HDMI wol novp9"
+MACHINE_FEATURES += "alsa usbhost switchoff osdposition hdmicec no-opengl hisil hisil-3716mv430 blindscan-tbs HDMI wol"
 
 MACHINE_ESSENTIAL_EXTRA_RDEPENDS += "\
 	${@bb.utils.contains("MACHINE_FEATURES", "hisil-${HICHIPSET}", "zgemma-libs-${HICHIPSET} zgemma-param-${HICHIPSET} zgemma-bootargs-${HICHIPSET} zgemma-bootlogo-${HICHIPSET} zgemma-fastboot-${HICHIPSET} zgemma-tntfs-${HICHIPSET}" , "", d)} \
