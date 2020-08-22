@@ -30,7 +30,6 @@ KERNEL_FILE = "uImage"
 ROOTFS_FILE = "rootfs.ubi"
 
 RCTYPE = "25"
-RCNAME = "zgemma5"
 
 #Provider
 PREFERRED_PROVIDER_virtual/kernel = "linux-zgemma"
