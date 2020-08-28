@@ -2119,7 +2119,6 @@ CONFIG_I2C_ALGOBIT=m
 # I2C system bus drivers (mostly embedded / system-on-chip)
 #
 CONFIG_I2C_BRCMSTB=y
-CONFIG_I2C_CBUS_GPIO=y
 # CONFIG_I2C_DESIGNWARE_PLATFORM is not set
 # CONFIG_I2C_DESIGNWARE_PCI is not set
 # CONFIG_I2C_EMEV2 is not set
