@@ -39,10 +39,6 @@ DVBMEDIASINK_CONFIG = "--with-wma --with-wmv --with-pcm --with-dts --with-eac3 -
 # E2 OSD settings
 EXTRA_OECONF_append_pn-enigma2 = " --with-alphablendingacceleration=always --with-blitaccelerationthreshold=250 --with-fillaccelerationthreshold=190000"
 
-MACHINE_EXTRA_RRECOMMENDS += "\
-	ffmpeg \
-	"
-
 MACHINE_FEATURES += "alsa usbhost switchoff osdposition hdmicec hisil hisil-3798mv200 mali multitranscoding dvb-c wol emmc blindscan-tbs HDMI"
 
 MACHINE_ESSENTIAL_EXTRA_RDEPENDS += "\

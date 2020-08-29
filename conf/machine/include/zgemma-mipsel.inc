@@ -27,7 +27,7 @@ require conf/machine/include/tune-mips32.inc
 require conf/machine/include/zgemma-essential.inc
 
 
-MACHINE_EXTRA_RRECOMMENDS += "\
+MACHINE_ESSENTIAL_EXTRA_RDEPENDS += "\
 	gstreamer1.0-plugin-dvbmediasink \
 	"
 
