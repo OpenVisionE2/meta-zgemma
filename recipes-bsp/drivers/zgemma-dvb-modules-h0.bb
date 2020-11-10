@@ -1,9 +1,9 @@
-SRCDATE = "20200727"
+SRCDATE = "20201104"
 
-require zgemma-dvb-modules.inc
+require zgemma-dvb-himodules.inc
 
-SRC_URI[md5sum] = "e9c6357985081d4fcada29da100e9469"
-SRC_URI[sha256sum] = "3e7cdb6ef627d7d71234c94e37ee4d7574b5faf02d0e720126f9963f246fbf9c"
+SRC_URI[md5sum] = "0e583118804b75dfbecaa74f68e56225"
+SRC_URI[sha256sum] = "b61d8930570acd6a668cb36fd8feb8a001fcb8b39ad056785c531b4805dde3c0"
 
 COMPATIBLE_MACHINE = "^(h0)$"
 

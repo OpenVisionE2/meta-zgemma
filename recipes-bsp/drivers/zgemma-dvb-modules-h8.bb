@@ -1,12 +1,12 @@
-SRCDATE = "20200727"
+SRCDATE = "20201104"
 
 PROVIDES = "virtual/blindscan-dvbc virtual/blindscan-dvbs"
 RDEPENDS_${PN} = "libjpeg-turbo"
 
-require zgemma-dvb-modules.inc
+require zgemma-dvb-himodules.inc
 
-SRC_URI[md5sum] = "1119fe976ec7d0c8731a811c5ae98eca"
-SRC_URI[sha256sum] = "4256c92ce24b227586a0afbc0751529b06182a9c3deaec3924ca7246c85ba30f"
+SRC_URI[md5sum] = "362765e31e7c566b584e95b11cfcfe8f"
+SRC_URI[sha256sum] = "7667d973cd171d0824fc569b0d1bcaa69e842c99f95cfef0142f2fafbe9b8b45"
 
 COMPATIBLE_MACHINE = "^(h8)$"
 

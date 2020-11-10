@@ -53,7 +53,7 @@ KERNEL_OUTPUT = "arch/${ARCH}/boot/${KERNEL_IMAGETYPE}"
 
 
 FILES_${KERNEL_PACKAGE_NAME}-image_h9 = " "
-FILES_${KERNEL_PACKAGE_NAME}-image_i5plus = " "
+FILES_${KERNEL_PACKAGE_NAME}-image_i55plus = " "
 FILES_${KERNEL_PACKAGE_NAME}-image_h0 = " "
 FILES_${KERNEL_PACKAGE_NAME}-image_h8 = " "
 FILES_${KERNEL_PACKAGE_NAME}-image = "/${KERNEL_IMAGEDEST}/findkerneldevice.sh"
