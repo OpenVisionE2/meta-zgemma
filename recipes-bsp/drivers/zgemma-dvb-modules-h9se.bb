@@ -1,11 +1,13 @@
 SRCDATE = "20201104"
 
+PROVIDES = "virtual/blindscan-dvbc virtual/blindscan-dvbs"
+
 require zgemma-dvb-himodules.inc
 
-SRC_URI[md5sum] = "0e583118804b75dfbecaa74f68e56225"
-SRC_URI[sha256sum] = "b61d8930570acd6a668cb36fd8feb8a001fcb8b39ad056785c531b4805dde3c0"
+SRC_URI[md5sum] = "e12b3e2676b721ee6b76e063e0b348a6"
+SRC_URI[sha256sum] = "4eea53b43890283772dedf8949fc1f36df76b632f3e5228a691c3336e698ea4e"
 
-COMPATIBLE_MACHINE = "^(h0)$"
+COMPATIBLE_MACHINE = "^(h9se)$"
 
 # Generate a simplistic standard init script
 do_compile_append () {

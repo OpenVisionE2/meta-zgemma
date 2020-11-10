@@ -7,7 +7,7 @@ PACKAGE_ARCH = "${MACHINE_ARCH}"
 
 KERNEL_RELEASE = "${KERNELVERSION}"
 SRCDATE = "20200508"
-COMPATIBLE_MACHINE = "^(h9|h9combo|h10|i55plus|h0|h8)$"
+COMPATIBLE_MACHINE = "^(h9|h9combo|h10|i55plus|h0|h8|h9combose|h9se|i55plusse)$"
 
 inherit kernel machine_kernel_pr samba_change_dialect
 
@@ -32,7 +32,7 @@ SRC_URI = "http://www.zgemma.org/downloads/linux-${PV}-${SRCDATE}-${ARCH}.tar.gz
 	file://wifi-linux_4.4.183.patch \
 	file://initramfs-subdirboot.cpio.gz;unpack=0 \
 	file://findkerneldevice.sh \
-	${@bb.utils.contains_any("MACHINE", "h9 i55plus", "file://0001-mmc-switch-1.8V.patch", "", d)} \
+	${@bb.utils.contains_any("MACHINE", "h9 i55plus h9se i55plusse", "file://0001-mmc-switch-1.8V.patch", "", d)} \
 	"
 
 # By default, kernel.bbclass modifies package names to allow multiple kernels
@@ -63,12 +63,27 @@ kernel_do_configure_prepend() {
 	install -m 0644 ${WORKDIR}/initramfs-subdirboot.cpio.gz ${B}/
 }
 
+kernel_do_install_append_h9se() {
+	install -d ${D}/${KERNEL_IMAGEDEST}
+	install -m 0755 ${WORKDIR}/findkerneldevice.sh ${D}/${KERNEL_IMAGEDEST}
+}
+
 kernel_do_install_append_h9combo() {
 	install -d ${D}/${KERNEL_IMAGEDEST}
 	install -m 0755 ${WORKDIR}/findkerneldevice.sh ${D}/${KERNEL_IMAGEDEST}
 }
 
+kernel_do_install_append_h9combose() {
+	install -d ${D}/${KERNEL_IMAGEDEST}
+	install -m 0755 ${WORKDIR}/findkerneldevice.sh ${D}/${KERNEL_IMAGEDEST}
+}
+
 kernel_do_install_append_h10() {
+	install -d ${D}/${KERNEL_IMAGEDEST}
+	install -m 0755 ${WORKDIR}/findkerneldevice.sh ${D}/${KERNEL_IMAGEDEST}
+}
+
+kernel_do_install_append_i55plusse() {
 	install -d ${D}/${KERNEL_IMAGEDEST}
 	install -m 0755 ${WORKDIR}/findkerneldevice.sh ${D}/${KERNEL_IMAGEDEST}
 }

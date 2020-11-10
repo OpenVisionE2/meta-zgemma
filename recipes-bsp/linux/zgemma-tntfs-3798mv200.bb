@@ -4,7 +4,7 @@ PRIORITY = "required"
 LICENSE = "CLOSED"
 require conf/license/license-close.inc
 
-COMPATIBLE_MACHINE = "^(h9|h9combo|h10|i55plus)$"
+COMPATIBLE_MACHINE = "^(h9|h9combo|h10|i55plus|h9combose|h9se|i55plusse)$"
 
 SRCDATE = "20200528"
 

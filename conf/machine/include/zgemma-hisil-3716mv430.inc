@@ -1,5 +1,3 @@
-DISTRO_FEATURES_remove += "x11 directfb"
-
 IMAGEDIR = "${MACHINETYPE}"
 
 KERNELVERSION = "4.4.35"

@@ -16,6 +16,8 @@ CHIPSET = "Hi3798Mv200"
 
 STB_PLATFORM = "zgemmahisi3798mv200"
 
+CMDLINE ?= "console=ttyAMA0,115200n8"
+
 #Provider
 PREFERRED_PROVIDER_virtual/kernel = "linux-zgemma"
 PREFERRED_VERSION_linux-zgemma = "${KERNELVERSION}"

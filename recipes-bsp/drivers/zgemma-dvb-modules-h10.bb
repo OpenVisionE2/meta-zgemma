@@ -1,7 +1,6 @@
 SRCDATE = "20201104"
 
 PROVIDES = "virtual/blindscan-dvbc virtual/blindscan-dvbs"
-RDEPENDS_${PN} = "libjpeg-turbo"
 
 require zgemma-dvb-himodules.inc
 
@@ -9,12 +8,6 @@ SRC_URI[md5sum] = "be86566a58cff1ed17e5baa07deae911"
 SRC_URI[sha256sum] = "b5e6cefa32abc2fefa89b95b022bda1fd4add0c6063e579e4c0a92623590041f"
 
 COMPATIBLE_MACHINE = "^(h10)$"
-
-INITSCRIPT_NAME = "suspend"
-INITSCRIPT_PARAMS = "start 89 0 ."
-inherit update-rc.d
-
-do_configure[noexec] = "1"
 
 # Generate a simplistic standard init script
 do_compile_append () {
@@ -32,16 +25,3 @@ mount -t sysfs sys /sys
 ${bindir}/turnoff_power
 EOF
 }
-
-do_install_append() {
-	install -d ${D}${sysconfdir}/init.d
-	install -d ${D}${bindir}
-	install -m 0755 ${S}/suspend ${D}${sysconfdir}/init.d
-	install -m 0755 ${S}/turnoff_power ${D}${bindir}
-}
-
-do_package_qa() {
-}
-
-FILES_${PN} += "${bindir} ${sysconfdir}/init.d"
-
