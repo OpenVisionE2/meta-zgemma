@@ -15,7 +15,7 @@ S = "${WORKDIR}"
 
 INHIBIT_PACKAGE_STRIP = "1"
 
-inherit module update-rc.d
+inherit update-rc.d
 
 FILES_${PN} += "${sysconfdir}/modprobe.d/${MACHINE}.conf ${nonarch_base_libdir}/modules/${KV}/extra ${bindir} ${sysconfdir}/init.d"
 
