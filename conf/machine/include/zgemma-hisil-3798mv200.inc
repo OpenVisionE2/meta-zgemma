@@ -49,6 +49,11 @@ MACHINE_ESSENTIAL_EXTRA_RDEPENDS += "\
 	${@bb.utils.contains("MACHINE_FEATURES", "wol", "zgemma-ethwol" , "", d)} \
 	${@bb.utils.contains("MACHINE_FEATURES", "ciplus-helper", "ciplus-helper-${HICHIPSET}" , "", d)} \
 	${@bb.utils.contains("MACHINE_FEATURES", "SDcard", "zgemma-bootargs-extra-${MACHINE}" , "", d)} \
+	firmware-rtl8192eu \
+	kernel-module-extrawlan-rtl8192eu \
+	firmware-mt7601u \
+	kernel-module-mt7601u \
+	kernel-module-extrawlan-rtl8192fu \
 	"
 
 IMAGE_CMD_ubi_append = " \

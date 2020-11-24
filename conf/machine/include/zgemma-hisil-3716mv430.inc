@@ -54,6 +54,7 @@ MACHINE_ESSENTIAL_EXTRA_RDEPENDS += "\
 	kernel-module-extrawlan-rtl8192eu \
 	firmware-mt7601u \
 	kernel-module-mt7601u \
+	kernel-module-extrawlan-rtl8192fu \
 	"
 
 IMAGE_CMD_ubi_append = " \
