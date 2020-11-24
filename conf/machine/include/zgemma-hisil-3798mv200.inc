@@ -44,7 +44,7 @@ EXTRA_OECONF_append_pn-enigma2 = " --with-alphablendingacceleration=always --wit
 MACHINE_FEATURES += "alsa usbhost switchoff osdposition hdmicec hisil hisil-3798mv200 mali multitranscoding dvb-c wol emmc blindscan-tbs HDMI"
 
 MACHINE_ESSENTIAL_EXTRA_RDEPENDS += "\
-	${@bb.utils.contains("MACHINE_FEATURES", "hisil-${HICHIPSET}", "kernel-module-mali-${HICHIPSET} zgemma-mali-${HICHIPSET} zgemma-libs-${HICHIPSET} zgemma-param-${HICHIPSET} zgemma-bootargs-${HICHIPSET} zgemma-bootlogo-${HICHIPSET} zgemma-fastboot-${HICHIPSET} zgemma-tntfs-${HICHIPSET}" , "", d)} \
+	${@bb.utils.contains("MACHINE_FEATURES", "hisil-${HICHIPSET}", "kernel-module-mali-${HICHIPSET} zgemma-mali-${HICHIPSET} zgemma-libs-${HICHIPSET} zgemma-param-${HICHIPSET} zgemma-bootargs-${HICHIPSET} zgemma-bootlogo-${HICHIPSET} zgemma-fastboot-${HICHIPSET}" , "", d)} \
 	${@bb.utils.contains("MACHINE_FEATURES", "hisil-recovery", "zgemma-recovery-${HICHIPSET}" , "", d)} \
 	${@bb.utils.contains("MACHINE_FEATURES", "wol", "zgemma-ethwol" , "", d)} \
 	${@bb.utils.contains("MACHINE_FEATURES", "ciplus-helper", "ciplus-helper-${HICHIPSET}" , "", d)} \
