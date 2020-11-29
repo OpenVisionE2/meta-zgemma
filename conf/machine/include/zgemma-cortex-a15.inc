@@ -44,6 +44,10 @@ DVBMEDIASINK_CONFIG = "--with-wma --with-wmv --with-pcm --with-dts --with-eac3 -
 
 MACHINE_FEATURES += "alsa usbhost switchoff osdposition hdmicec blindscan-tbs textlcd 7segment dvb-c v3d-nxpl emmc ci mountboot blindscan-dvbs swap AV_JACK HDMI"
 
+IMAGE_CMD_prepend = "\
+	rm -Rf ${IMAGE_ROOTFS}/tmp/*; \
+	"
+
 IMAGE_CMD_zgemmc_append = " \
 	mkdir -p ${IMGDEPLOYDIR}/${IMAGEDIR}; \
 	cp ${IMGDEPLOYDIR}/${IMAGE_NAME}.emmc.img ${IMGDEPLOYDIR}/${IMAGEDIR}/disk.img; \

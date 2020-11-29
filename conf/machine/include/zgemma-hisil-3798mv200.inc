@@ -56,6 +56,10 @@ MACHINE_ESSENTIAL_EXTRA_RDEPENDS += "\
 	kernel-module-extrawlan-rtl8192fu \
 	"
 
+IMAGE_CMD_ubi_prepend = " \
+	rm -Rf ${IMAGE_ROOTFS}/tmp/*; \
+	"
+
 IMAGE_CMD_ubi_append = " \
 	mkdir -p ${IMGDEPLOYDIR}/zgemma/${IMAGEDIR}; \
 	cp ${IMGDEPLOYDIR}/${IMAGE_NAME}${IMAGE_NAME_SUFFIX}.ubi ${IMGDEPLOYDIR}/zgemma/${IMAGEDIR}/${ROOTFS_FILE}; \
@@ -120,6 +124,10 @@ IMAGE_CMD_zgemmafastboot8gb_append = " \
 	cd ..; \
 	rm -f ${DEPLOY_DIR_IMAGE}/*.tar.bz2; \
 	rm -Rf zgemma; \
+	"
+
+IMAGE_CMD_prepend = "\
+	rm -Rf ${IMAGE_ROOTFS}/tmp/*; \
 	"
 
 EXTRA_ALSA = "mv200"
