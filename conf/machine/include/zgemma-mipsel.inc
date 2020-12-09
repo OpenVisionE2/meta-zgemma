@@ -37,7 +37,8 @@ DVBMEDIASINK_CONFIG = "--with-wma --with-wmv --with-pcm --with-dts --with-eac3 \
 
 MACHINE_FEATURES += "alsa usbhost switchoff osdposition hdmicec blindscan-tbs videoenhancement dvb-c HDMI"
 
-IMAGE_CMD_ubi_prepend = " \
+IMAGE_CMD_ubifs_prepend = " \
+	rm -Rf ${IMAGE_ROOTFS}/boot/*; \
 	rm -Rf ${IMAGE_ROOTFS}/tmp/*; \
 	"
 

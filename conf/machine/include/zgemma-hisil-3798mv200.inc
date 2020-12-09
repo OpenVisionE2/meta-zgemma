@@ -56,7 +56,7 @@ MACHINE_ESSENTIAL_EXTRA_RDEPENDS += "\
 	kernel-module-extrawlan-rtl8192fu \
 	"
 
-IMAGE_CMD_ubi_prepend = " \
+IMAGE_CMD_ubifs_prepend = " \
 	rm -Rf ${IMAGE_ROOTFS}/tmp/*; \
 	"
 
