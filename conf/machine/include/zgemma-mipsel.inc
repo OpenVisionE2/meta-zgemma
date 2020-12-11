@@ -6,10 +6,6 @@ KERNELVERSION = "4.10.12"
 #Provider
 PREFERRED_PROVIDER_virtual/kernel = "linux-zgemma"
 PREFERRED_VERSION_linux-zgemma = "${KERNELVERSION}"
-PREFERRED_PROVIDER_virtual/egl ?= "zgemma-v3ddriver-${MACHINE}"
-PREFERRED_PROVIDER_virtual/libgles1 ?= "zgemma-v3ddriver-${MACHINE}"
-PREFERRED_PROVIDER_virtual/libgles2 ?= "zgemma-v3ddriver-${MACHINE}"
-PREFERRED_PROVIDER_virtual/libgbm ?= "zgemma-v3ddriver-${MACHINE}"
 PREFERRED_PROVIDER_virtual/libgl ?= "mesa"
 PREFERRED_PROVIDER_virtual/mesa ?= "mesa"
 
