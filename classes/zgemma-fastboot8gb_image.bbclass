@@ -57,8 +57,8 @@ IMAGE_CMD_zgemmafastboot8gb () {
 	mcopy -i ${WORKDIR}/bootoptions.img -v ${WORKDIR}/STARTUP_LINUX_4 ::
 	mcopy -i ${WORKDIR}/bootoptions.img -v ${WORKDIR}/STARTUP_RECOVERY ::
 	mcopy -i ${WORKDIR}/bootoptions.img -v ${WORKDIR}/bootmenu.conf ::
-	cp ${WORKDIR}/bootoptions.img ${IMGDEPLOYDIR}/bootoptions.img
+	cp -f ${WORKDIR}/bootoptions.img ${IMGDEPLOYDIR}/bootoptions.img
 	echo boot-recovery > ${WORKDIR}/misc-boot.img
-	cp ${WORKDIR}/misc-boot.img ${IMGDEPLOYDIR}/misc-boot.img
+	cp -f ${WORKDIR}/misc-boot.img ${IMGDEPLOYDIR}/misc-boot.img
 	ext2simg ${IMGDEPLOYDIR}/${IMAGE_NAME}${IMAGE_NAME_SUFFIX}.ext4 ${IMGDEPLOYDIR}/${IMAGE_NAME}${IMAGE_NAME_SUFFIX}.userdata.ext4
 }
