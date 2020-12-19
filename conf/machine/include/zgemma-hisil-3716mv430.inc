@@ -63,15 +63,15 @@ IMAGE_CMD_ubifs_prepend = " \
 
 IMAGE_CMD_ubi_append = " \
 	mkdir -p ${IMGDEPLOYDIR}/zgemma/${IMAGEDIR}; \
-	cp ${IMGDEPLOYDIR}/${IMAGE_NAME}${IMAGE_NAME_SUFFIX}.ubi ${IMGDEPLOYDIR}/zgemma/${IMAGEDIR}/${ROOTFS_FILE}; \
-	cp ${DEPLOY_DIR_IMAGE}/uImage ${IMGDEPLOYDIR}/zgemma/${IMAGEDIR}/${KERNEL_FILE}; \
-	cp ${IMGDEPLOYDIR}/bootoptions.img ${IMGDEPLOYDIR}/zgemma/${IMAGEDIR}/bootoptions.img; \
-	cp ${DEPLOY_DIR_IMAGE}/zgemma-partitions-${MACHINE}/update_bootargs_${MACHINE}.bin ${IMGDEPLOYDIR}/zgemma/update_bootargs_${MACHINE}.bin; \
-	cp ${DEPLOY_DIR_IMAGE}/zgemma-partitions-${MACHINE}/${MACHINE}/fastboot.bin ${IMGDEPLOYDIR}/zgemma/${IMAGEDIR}/fastboot.bin; \
-	cp ${DEPLOY_DIR_IMAGE}/zgemma-partitions-${MACHINE}/${MACHINE}/bootargs.bin ${IMGDEPLOYDIR}/zgemma/${IMAGEDIR}/bootargs.bin; \
-	cp ${DEPLOY_DIR_IMAGE}/zgemma-partitions-${MACHINE}/${MACHINE}/pq_param.bin ${IMGDEPLOYDIR}/zgemma/${IMAGEDIR}/pq_param.bin; \
-	cp ${DEPLOY_DIR_IMAGE}/zgemma-partitions-${MACHINE}/${MACHINE}/baseparam.img ${IMGDEPLOYDIR}/zgemma/${IMAGEDIR}/baseparam.img; \
-	cp ${DEPLOY_DIR_IMAGE}/zgemma-partitions-${MACHINE}/${MACHINE}/logo.img ${IMGDEPLOYDIR}/zgemma/${IMAGEDIR}/logo.img; \
+	cp -f ${IMGDEPLOYDIR}/${IMAGE_NAME}${IMAGE_NAME_SUFFIX}.ubi ${IMGDEPLOYDIR}/zgemma/${IMAGEDIR}/${ROOTFS_FILE}; \
+	cp -f ${DEPLOY_DIR_IMAGE}/uImage ${IMGDEPLOYDIR}/zgemma/${IMAGEDIR}/${KERNEL_FILE}; \
+	cp -f ${IMGDEPLOYDIR}/bootoptions.img ${IMGDEPLOYDIR}/zgemma/${IMAGEDIR}/bootoptions.img; \
+	cp -f ${DEPLOY_DIR_IMAGE}/zgemma-partitions-${MACHINE}/update_bootargs_${MACHINE}.bin ${IMGDEPLOYDIR}/zgemma/update_bootargs_${MACHINE}.bin; \
+	cp -f ${DEPLOY_DIR_IMAGE}/zgemma-partitions-${MACHINE}/${MACHINE}/fastboot.bin ${IMGDEPLOYDIR}/zgemma/${IMAGEDIR}/fastboot.bin; \
+	cp -f ${DEPLOY_DIR_IMAGE}/zgemma-partitions-${MACHINE}/${MACHINE}/bootargs.bin ${IMGDEPLOYDIR}/zgemma/${IMAGEDIR}/bootargs.bin; \
+	cp -f ${DEPLOY_DIR_IMAGE}/zgemma-partitions-${MACHINE}/${MACHINE}/pq_param.bin ${IMGDEPLOYDIR}/zgemma/${IMAGEDIR}/pq_param.bin; \
+	cp -f ${DEPLOY_DIR_IMAGE}/zgemma-partitions-${MACHINE}/${MACHINE}/baseparam.img ${IMGDEPLOYDIR}/zgemma/${IMAGEDIR}/baseparam.img; \
+	cp -f ${DEPLOY_DIR_IMAGE}/zgemma-partitions-${MACHINE}/${MACHINE}/logo.img ${IMGDEPLOYDIR}/zgemma/${IMAGEDIR}/logo.img; \
 	echo "${IMAGE_NAME}" > ${IMGDEPLOYDIR}/zgemma/imageversion; \
 	cd ${IMGDEPLOYDIR}/zgemma; \
 	zip -r ../${IMAGE_NAME}_usb.zip *; \
