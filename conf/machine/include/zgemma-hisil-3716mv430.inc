@@ -73,6 +73,7 @@ IMAGE_CMD_ubi_append = " \
 	cp -f ${DEPLOY_DIR_IMAGE}/zgemma-partitions-${MACHINE}/${MACHINE}/baseparam.img ${IMGDEPLOYDIR}/zgemma/${IMAGEDIR}/baseparam.img; \
 	cp -f ${DEPLOY_DIR_IMAGE}/zgemma-partitions-${MACHINE}/${MACHINE}/logo.img ${IMGDEPLOYDIR}/zgemma/${IMAGEDIR}/logo.img; \
 	echo "${IMAGE_NAME}" > ${IMGDEPLOYDIR}/zgemma/imageversion; \
+	echo "https://forum.openvision.tech/app.php/donate" > ${IMGDEPLOYDIR}/zgemma/donate.txt; \
 	cd ${IMGDEPLOYDIR}/zgemma; \
 	zip -r ../${IMAGE_NAME}_usb.zip *; \
 	cd ..; \

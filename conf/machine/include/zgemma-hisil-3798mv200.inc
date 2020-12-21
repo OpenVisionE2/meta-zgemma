@@ -72,6 +72,7 @@ IMAGE_CMD_ubi_append = " \
 	cp -f ${DEPLOY_DIR_IMAGE}/zgemma-partitions-${MACHINE}/${MACHINE}/baseparam.img ${IMGDEPLOYDIR}/zgemma/${IMAGEDIR}/baseparam.img; \
 	cp -f ${DEPLOY_DIR_IMAGE}/zgemma-partitions-${MACHINE}/${MACHINE}/logo.img ${IMGDEPLOYDIR}/zgemma/${IMAGEDIR}/logo.img; \
 	echo "${IMAGE_NAME}" > ${IMGDEPLOYDIR}/zgemma/imageversion; \
+	echo "https://forum.openvision.tech/app.php/donate" > ${IMGDEPLOYDIR}/zgemma/donate.txt; \
 	echo "rename this file to 'force' to force an update without confirmation" > ${IMGDEPLOYDIR}/zgemma/noforce; \
 	rm -f ${IMGDEPLOYDIR}/*.zip; \
 	cd ${IMGDEPLOYDIR}/zgemma; \
@@ -90,6 +91,7 @@ IMAGE_CMD_zgemmafastboot8gb_append = " \
 	cp -f ${IMGDEPLOYDIR}/${IMAGE_NAME}${IMAGE_NAME_SUFFIX}.tar ${IMGDEPLOYDIR}/zgemma/${IMAGEDIR}/rootfs.tar; \
 	bzip2 ${IMGDEPLOYDIR}/zgemma/${IMAGEDIR}/rootfs.tar; \
 	echo "${IMAGE_NAME}" > ${IMGDEPLOYDIR}/zgemma/${IMAGEDIR}/imageversion; \
+	echo "https://forum.openvision.tech/app.php/donate" > ${IMGDEPLOYDIR}/zgemma/donate.txt; \
 	echo "${IMAGE_NAME}_usb.zip" > ${IMGDEPLOYDIR}/zgemma/unforce_${MACHINE}.txt; \
 	echo "Rename unforce_${MACHINE}.txt to force_${MACHINE}.txt and move it to the root of your usb-stick" > ${IMGDEPLOYDIR}/zgemma/force_${MACHINE}_READ.ME; \
 	echo "When enter the recovery menu you're forcing that the image ${IMAGE_NAME}_usb.zip will been installed into linux-slot1" >> ${IMGDEPLOYDIR}/zgemma/force_${MACHINE}_READ.ME; \
