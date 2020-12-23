@@ -81,7 +81,7 @@ IMAGE_CMD_ubi_append = " \
 	rm -f ${DEPLOY_DIR_IMAGE}/*.ubi; \
 	rm -f ${DEPLOY_DIR_IMAGE}/*.ubifs; \
 	rm -Rf zgemma; \
-	rm -Rf zgemma-partitions-${MACHINE}; \
+	rm -Rf ${DEPLOY_DIR_IMAGE}/zgemma-partitions-${MACHINE}; \
 	"
 
 IMAGE_CMD_zgemmafastboot8gb_append = " \
@@ -130,7 +130,7 @@ IMAGE_CMD_zgemmafastboot8gb_append = " \
 	cd ..; \
 	rm -f ${DEPLOY_DIR_IMAGE}/*.tar.bz2; \
 	rm -Rf zgemma; \
-	rm -Rf zgemma-partitions-${MACHINE}; \
+	rm -Rf ${DEPLOY_DIR_IMAGE}/zgemma-partitions-${MACHINE}; \
 	"
 
 IMAGE_CMD_prepend = "\
