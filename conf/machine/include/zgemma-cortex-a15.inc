@@ -58,4 +58,5 @@ IMAGE_CMD_zgemmc_append = " \
 	zip ${IMAGE_NAME}_usb.zip ${IMAGEDIR}/imageversion ${IMAGEDIR}/donate.txt ${IMAGEDIR}/${KERNEL_FILE} ${IMAGEDIR}/${ROOTFS_FILE}; \
 	rm -f ${DEPLOY_DIR_IMAGE}/*.tar.bz2; \
 	rm -Rf ${IMAGEDIR}; \
-"
+	rm -Rf zgemma; \
+	"

@@ -81,7 +81,7 @@ IMAGE_CMD_ubi_append = " \
 	rm -f ${DEPLOY_DIR_IMAGE}/*.ubi; \
 	rm -f ${DEPLOY_DIR_IMAGE}/*.ubifs; \
 	rm -Rf zgemma; \
-	rm -Rf ${DEPLOY_DIR_IMAGE}/zgemma-partitions-${MACHINE}; \
+	rm -Rf zgemma-partitions-${MACHINE}; \
 	"
 
 IMAGE_CMD_zgemmafastboot8gb_append = " \
@@ -91,7 +91,7 @@ IMAGE_CMD_zgemmafastboot8gb_append = " \
 	cp -f ${IMGDEPLOYDIR}/${IMAGE_NAME}${IMAGE_NAME_SUFFIX}.tar ${IMGDEPLOYDIR}/zgemma/${IMAGEDIR}/rootfs.tar; \
 	bzip2 ${IMGDEPLOYDIR}/zgemma/${IMAGEDIR}/rootfs.tar; \
 	echo "${IMAGE_NAME}" > ${IMGDEPLOYDIR}/zgemma/${IMAGEDIR}/imageversion; \
-	echo "https://forum.openvision.tech/app.php/donate" > ${IMGDEPLOYDIR}/zgemma/donate.txt; \
+	echo "https://forum.openvision.tech/app.php/donate" > ${IMGDEPLOYDIR}/zgemma/${IMAGEDIR}/donate.txt; \
 	echo "${IMAGE_NAME}_usb.zip" > ${IMGDEPLOYDIR}/zgemma/unforce_${MACHINE}.txt; \
 	echo "Rename unforce_${MACHINE}.txt to force_${MACHINE}.txt and move it to the root of your usb-stick" > ${IMGDEPLOYDIR}/zgemma/force_${MACHINE}_READ.ME; \
 	echo "When enter the recovery menu you're forcing that the image ${IMAGE_NAME}_usb.zip will been installed into linux-slot1" >> ${IMGDEPLOYDIR}/zgemma/force_${MACHINE}_READ.ME; \
@@ -113,11 +113,15 @@ IMAGE_CMD_zgemmafastboot8gb_append = " \
 	echo "A small change can destroy all your install images. So we can better leave it and not install it if it's not need." >>${IMGDEPLOYDIR}/${IMAGEDIRRECOVERY}/recovery_${MACHINE}_READ.ME; \
 	rm -f ${IMGDEPLOYDIR}/*.zip; \
 	cd ${IMGDEPLOYDIR}/${IMAGEDIRRECOVERY}; \
+	echo "${IMAGE_NAME}" > imageversion; \
+	echo "https://forum.openvision.tech/app.php/donate" > donate.txt; \
 	zip -r ../${IMAGE_NAME}_recovery_emmc.zip *; \
 	cd ..; \
 	cp -f ${IMGDEPLOYDIR}/${IMAGE_NAME}${IMAGE_NAME_SUFFIX}.userdata.ext4 ${IMGDEPLOYDIR}/${IMAGEDIRRECOVERY}/${MACHINE}/userdata.ext4; \
 	cp -f ${DEPLOY_DIR_IMAGE}/uImage ${IMGDEPLOYDIR}/${IMAGEDIRRECOVERY}/${MACHINE}/uImage; \
 	cd ${IMGDEPLOYDIR}/${IMAGEDIRRECOVERY}; \
+	echo "${IMAGE_NAME}" > imageversion; \
+	echo "https://forum.openvision.tech/app.php/donate" > donate.txt; \
 	zip -r ../${IMAGE_NAME}_full_recovery_emmc.zip *; \
 	cd ..; \
 	rm -Rf ${IMAGEDIRRECOVERY}; \
@@ -126,6 +130,7 @@ IMAGE_CMD_zgemmafastboot8gb_append = " \
 	cd ..; \
 	rm -f ${DEPLOY_DIR_IMAGE}/*.tar.bz2; \
 	rm -Rf zgemma; \
+	rm -Rf zgemma-partitions-${MACHINE}; \
 	"
 
 IMAGE_CMD_prepend = "\

@@ -80,5 +80,5 @@ IMAGE_CMD_ubi_append = " \
 	rm -f ${DEPLOY_DIR_IMAGE}/*.ubi; \
 	rm -f ${DEPLOY_DIR_IMAGE}/*.ubifs; \
 	rm -Rf zgemma; \
-	rm -Rf ${DEPLOY_DIR_IMAGE}/zgemma-partitions-${MACHINE}; \
+	rm -Rf zgemma-partitions-${MACHINE}; \
 	"
