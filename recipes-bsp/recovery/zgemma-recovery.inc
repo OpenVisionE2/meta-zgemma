@@ -18,7 +18,7 @@ do_configure[nostamp] = "1"
 
 do_deploy() {
     install -d ${DEPLOY_DIR_IMAGE}/zgemma-partitions-${MACHINE}/${MACHINE}
-    install -m 0755 ${WORKDIR}/recovery-${MACHINE}.bin ${DEPLOY_DIR_IMAGE}/zgemma-partitions-${MACHINE}/${MACHINE}/recovery.bin
+    install -m 0755 ${WORKDIR}/recovery-${MACHINETYPE}.bin ${DEPLOY_DIR_IMAGE}/zgemma-partitions-${MACHINE}/${MACHINE}/recovery.bin
 }
 
 addtask deploy before do_build after do_install
