@@ -32,7 +32,6 @@ RCTYPE = "25"
 #Provider
 PREFERRED_PROVIDER_virtual/kernel = "linux-zgemma"
 PREFERRED_VERSION_linux-zgemma = "${KERNELVERSION}"
-PREFERRED_PROVIDER_virtual/gstreamer1.0-dvbmediasink = "gstreamer1.0-plugin-dvbmediasink"
 PREFERRED_PROVIDER_virtual/enigma2-mediaservice = "enigma2-plugin-systemplugins-servicehisilicon"
 
 require conf/machine/include/tune-cortexa7.inc

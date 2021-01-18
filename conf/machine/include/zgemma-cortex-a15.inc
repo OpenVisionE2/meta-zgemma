@@ -32,7 +32,6 @@ require conf/machine/include/tune-cortexa15.inc
 require conf/machine/include/zgemma-essential.inc
 
 MACHINE_ESSENTIAL_EXTRA_RDEPENDS += "\
-	gstreamer1.0-plugin-dvbmediasink \
 	${@bb.utils.contains('MACHINE_FEATURES', 'swap', 'zgemma-swapcreate', '',d)} \
 	"
 
