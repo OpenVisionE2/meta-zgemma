@@ -11,4 +11,4 @@ BOX_BRAND = "airdigital"
 IMAGEDIR ?= "zgemma/${MACHINE}"
 
 RCNAME ?= "zgemma3"
-RCIDNUM ?= "1"
+RCIDNUM ?= "2"
